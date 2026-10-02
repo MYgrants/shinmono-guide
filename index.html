@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>新もの補助金 申請サポートガイド</title>
+<meta name="description" content="新事業進出・ものづくり商業サービス補助金の申請に必要な書類をご案内。法人・個人事業主それぞれの必要書類をチェックリスト形式で確認できます。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-soft:#F5F5F7;
+    --bg-soft2:#FBFBFD;
+    --ink:#1D1D1F;
+    --ink-soft:#6E6E73;
+    --ink-faint:#86868B;
+    --blue:#39237C;
+    --blue-deep:#2A1960;
+    --blue-tint:#EEEAF8;
+    --blue-tint2:#E3DDF3;
+    --blue-light:#B8A9E8;
+    --line:#D2D2D7;
+    --line-soft:#E8E8ED;
+    --ok:#1E8E3E;
+    --ok-soft:#E6F4EA;
+    --paper:#ffffff;
+    --shadow-sm: 0 2px 10px rgba(0,0,0,0.06);
+    --shadow-md: 0 10px 34px rgba(0,0,0,0.10);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Noto Sans JP","Inter",-apple-system,BlinkMacSystemFont,sans-serif;
+    line-height:1.7; -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--blue); color:#fff;}
+  a{color:inherit; text-decoration:none;}
+  img,svg{display:block;}
+
+  /* ===================== TOP NAV ===================== */
+  header.nav{
+    position:sticky; top:0; z-index:60;
+    background:rgba(255,255,255,0.78);
+    backdrop-filter:saturate(180%) blur(20px);
+    -webkit-backdrop-filter:saturate(180%) blur(20px);
+    border-bottom:1px solid var(--line-soft);
+    padding-top:env(safe-area-inset-top,0px);
+  }
+  .nav-inner{
+    max-width:1180px; margin:0 auto; padding:0 22px;
+    height:52px; display:flex; align-items:center; justify-content:space-between;
+  }
+  .nav-left{display:flex; align-items:center; gap:16px;}
+  .burger{
+    width:34px; height:34px; border-radius:50%; border:none; background:transparent;
+    cursor:pointer; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    transition:background .2s ease;
+  }
+  .burger:hover{background:var(--bg-soft);}
+  .burger span{display:block; width:16px; height:1.4px; background:var(--ink); margin:2.5px 0; transition:.25s ease;}
+
+  .brand{font-size:.86rem; font-weight:600; letter-spacing:-0.01em; display:flex; align-items:center; gap:8px;}
+  .brand .dot{width:7px; height:7px; border-radius:50%; background:var(--blue);}
+
+  nav.pills{display:flex; gap:30px;}
+  nav.pills a{font-size:.78rem; color:var(--ink-soft); font-weight:400; transition:color .2s ease;}
+  nav.pills a:hover{color:var(--ink);}
+  @media (max-width:820px){ nav.pills{display:none;} }
+
+  .nav-cta{
+    font-size:.76rem; font-weight:500; color:#fff; background:var(--blue);
+    padding:7px 16px; border-radius:980px; transition:background .2s ease; white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--blue-deep);}
+
+  .nav-right{display:flex; align-items:center; gap:10px;}
+  .mypage-group{position:relative;}
+  .mypage-toggle{
+    display:flex; align-items:center; gap:6px; font-size:.78rem; font-weight:600;
+    color:var(--ink); background:var(--bg-soft); border:1px solid var(--line-soft);
+    padding:7px 14px; border-radius:980px; cursor:pointer; transition:.2s ease; font-family:inherit;
+  }
+  .mypage-toggle:hover{background:var(--line-soft);}
+  .mypage-toggle svg{transition:transform .2s ease;}
+  .mypage-toggle.open svg{transform:rotate(180deg);}
+  .mypage-menu{
+    position:absolute; top:calc(100% + 10px); right:0; width:270px;
+    background:#fff; border:1px solid var(--line-soft); border-radius:14px;
+    box-shadow:var(--shadow-md); padding:8px; opacity:0; pointer-events:none;
+    transform:translateY(-6px); transition:.2s ease; z-index:70;
+  }
+  .mypage-menu.open{opacity:1; pointer-events:auto; transform:translateY(0);}
+  .mypage-menu a, .mypage-menu .mp-off{
+    display:flex; flex-direction:column; gap:2px; padding:10px 12px; border-radius:9px;
+    font-size:.86rem; font-weight:600; color:var(--ink); transition:background .15s ease;
+  }
+  .mypage-menu a:hover{background:var(--bg-soft);}
+  .mypage-menu .mp-off{color:var(--ink-faint); cursor:default;}
+  .mypage-menu .mp-sub{font-size:.72rem; font-weight:400; color:var(--ink-faint);}
+  @media (max-width:900px){ .mypage-toggle span{display:none;} .mypage-toggle{padding:9px;} }
+
+  /* ===================== SIDEBAR DRAWER ===================== */
+  .sidebar-backdrop{
+    position:fixed; inset:0; background:rgba(0,0,0,0.22);
+    opacity:0; pointer-events:none; transition:opacity .35s ease; z-index:98;
+  }
+  .sidebar-backdrop.open{opacity:1; pointer-events:auto;}
+
+  .sidebar{
+    position:fixed; top:0; left:0; bottom:0; width:300px; max-width:82vw;
+    background:#fff; z-index:99;
+    transform:translateX(-100%); transition:transform .38s cubic-bezier(.32,.72,0,1);
+    box-shadow: 4px 0 24px rgba(0,0,0,0.08);
+    display:flex; flex-direction:column;
+    padding:20px 0 24px;
+    padding-top:calc(20px + env(safe-area-inset-top,0px));
+    overflow-y:auto;
+  }
+  .sidebar.open{transform:translateX(0);}
+  .sidebar-head{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:6px 22px 18px; border-bottom:1px solid var(--line-soft); margin-bottom:8px;
+  }
+  .sidebar-head .brand{font-size:.9rem;}
+  .sidebar-close{
+    width:30px; height:30px; border-radius:50%; border:none; background:var(--bg-soft);
+    cursor:pointer; position:relative;
+  }
+  .sidebar-close::before,.sidebar-close::after{
+    content:""; position:absolute; left:9px; top:14px; width:12px; height:1.4px; background:var(--ink);
+  }
+  .sidebar-close::before{transform:rotate(45deg);}
+  .sidebar-close::after{transform:rotate(-45deg);}
+
+  .sidebar-list{list-style:none; margin:0; padding:6px 10px;}
+  .sidebar-list li a{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:13px 12px; border-radius:10px; font-size:.94rem; font-weight:500;
+    color:var(--ink); transition:background .15s ease;
+  }
+  .sidebar-list li a:hover{background:var(--bg-soft);}
+  .sidebar-list li a .chev{color:var(--ink-faint); font-size:.8rem;}
+  .sidebar-sub{list-style:none; margin:0 0 6px; padding:0 12px 0 22px;}
+  .sidebar-sub li a{
+    display:flex; font-size:.86rem; font-weight:400; color:var(--ink-soft); padding:10px 12px; border-radius:10px;
+  }
+  .sidebar-sub li a:hover{background:var(--bg-soft);}
+  .sidebar-divider{height:1px; background:var(--line-soft); margin:10px 22px;}
+  .sidebar-foot{padding:14px 22px 0; font-size:.72rem; color:var(--ink-faint); margin-top:auto;}
+
+  main{position:relative; z-index:1;}
+  section{max-width:1180px; margin:0 auto; padding:100px 22px; scroll-margin-top:52px;}
+  @media (max-width:760px){ section{padding:70px 20px;} }
+  section.soft{background:var(--bg-soft); max-width:none; padding-left:0; padding-right:0;}
+  section.soft > .inner{max-width:1180px; margin:0 auto; padding:100px 22px;}
+  @media (max-width:760px){ section.soft > .inner{padding:70px 20px;} }
+
+  .eyebrow{
+    font-size:.8rem; font-weight:600; color:var(--blue); letter-spacing:.01em; display:block; margin-bottom:10px;
+  }
+  h2.title{
+    font-weight:700; letter-spacing:-0.02em; line-height:1.2;
+    font-size:clamp(1.9rem, 3.6vw, 2.7rem); margin:0 0 .3em;
+  }
+  h3.sub-title{
+    font-weight:700; letter-spacing:-0.02em; line-height:1.3; font-size:1.5rem; margin:64px 0 .4em;
+  }
+  p.lead{color:var(--ink-soft); font-size:1.06rem; max-width:640px;}
+
+  /* ===================== HERO ===================== */
+  .hero{
+    padding:96px 22px 90px; text-align:center;
+  }
+  .hero-inner{max-width:900px; margin:0 auto;}
+  .hero .eyebrow{display:inline-block; margin:0 auto 18px;}
+  h1.hero-title{
+    font-weight:800; letter-spacing:-0.03em; line-height:1.15;
+    font-size:clamp(2.4rem, 6.6vw, 4.4rem); margin:0 0 22px; color:var(--ink);
+  }
+  h1.hero-title span{color:var(--blue);}
+  .hero-lead{color:var(--ink-soft); font-size:1.18rem; max-width:560px; margin:0 auto 40px;}
+
+  .hero-actions{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-bottom:64px;}
+  .btn{
+    padding:13px 26px; border-radius:980px; font-size:.94rem; font-weight:500;
+    transition:.2s ease; display:inline-flex; align-items:center; gap:8px;
+  }
+  .btn-primary{background:var(--blue); color:#fff;}
+  .btn-primary:hover{background:var(--blue-deep);}
+  .btn-ghost{background:var(--bg-soft); color:var(--ink);}
+  .btn-ghost:hover{background:var(--line-soft);}
+
+  .hero-cards{
+    display:grid; grid-template-columns:1fr 1fr; gap:18px; max-width:820px; margin:0 auto;
+    text-align:left;
+  }
+  @media (max-width:640px){ .hero-cards{grid-template-columns:1fr;} }
+  .path-card{
+    background:var(--bg-soft2); border:1px solid var(--line-soft); border-radius:22px;
+    padding:30px 28px; box-shadow:var(--shadow-sm);
+    transition:transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s ease;
+  }
+  .path-card:hover{transform:translateY(-6px); box-shadow:var(--shadow-md);}
+  .path-card .num{font-size:.74rem; color:var(--blue); font-weight:600;}
+  .path-card h3{font-size:1.35rem; font-weight:700; letter-spacing:-0.01em; margin:.5em 0 .3em;}
+  .path-card p{color:var(--ink-soft); font-size:.9rem; margin:0 0 16px;}
+  .path-card .go{font-size:.82rem; color:var(--blue); font-weight:500; display:inline-flex; align-items:center; gap:5px;}
+  .path-card .go svg{transition:transform .25s ease;}
+  .path-card:hover .go svg{transform:translateX(4px);}
+
+  .hero-official{margin-top:34px; font-size:.84rem; color:var(--ink-faint);}
+  .hero-official a{color:var(--blue); font-weight:500;}
+
+  /* ===================== ABOUT ===================== */
+  .about-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:60px; align-items:start;}
+  @media (max-width:820px){ .about-grid{grid-template-columns:1fr; gap:36px;} }
+  .about-copy p{color:var(--ink-soft); font-size:1.02rem; margin:1.1em 0;}
+  .about-copy .quote{
+    background:var(--bg); border:1px solid var(--line-soft); border-radius:18px;
+    padding:24px 26px; margin:26px 0; font-size:1.02rem; color:var(--ink); font-weight:500;
+    box-shadow:var(--shadow-sm);
+  }
+  .diagram{background:#fff; border:1px solid var(--line-soft); border-radius:22px; padding:30px; box-shadow:var(--shadow-sm);}
+  .diagram-label{font-size:.76rem; color:var(--ink-faint); font-weight:600; margin-bottom:18px; display:block; text-transform:uppercase; letter-spacing:.06em;}
+  .diagram-node{display:flex; align-items:flex-start; gap:14px; padding:14px 0; border-bottom:1px solid var(--line-soft); font-size:.92rem;}
+  .diagram-node:last-child{border-bottom:none;}
+  .diagram-node .dot{width:9px; height:9px; border-radius:50%; background:var(--blue); flex:none; margin-top:6px;}
+  .diagram-node b{font-weight:600;}
+  .diagram-node span{color:var(--ink-soft); font-size:.84rem; display:block; margin-top:2px;}
+
+  .frame-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:26px;}
+  @media (max-width:820px){ .frame-grid{grid-template-columns:1fr;} }
+  .frame-card{background:#fff; border:1px solid var(--line-soft); border-radius:22px; padding:28px; box-shadow:var(--shadow-sm);}
+  .frame-card .tag{font-size:.74rem; font-weight:600; color:var(--blue); display:block; margin-bottom:6px;}
+  .frame-card h4{font-size:1.1rem; font-weight:700; margin:0 0 10px; letter-spacing:-0.01em;}
+  .frame-card p{font-size:.9rem; color:var(--ink-soft); margin:0;}
+
+  .table-wrap{overflow-x:auto; margin-top:22px; background:#fff; border:1px solid var(--line-soft); border-radius:18px; box-shadow:var(--shadow-sm);}
+  table.cmp{border-collapse:collapse; width:100%; min-width:640px; font-size:.88rem;}
+  table.cmp th, table.cmp td{padding:15px 18px; text-align:left; border-bottom:1px solid var(--line-soft); vertical-align:top;}
+  table.cmp tr:last-child td{border-bottom:none;}
+  table.cmp th{font-size:.78rem; font-weight:600; color:var(--ink-faint); background:var(--bg-soft2); white-space:nowrap;}
+  table.cmp td.lb{font-size:.8rem; font-weight:600; color:var(--ink-faint); white-space:nowrap;}
+
+  .req-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:26px;}
+  @media (max-width:820px){ .req-grid{grid-template-columns:1fr;} }
+  .req-card{background:#fff; border:1px solid var(--line-soft); border-radius:22px; padding:28px 30px; box-shadow:var(--shadow-sm);}
+  .req-card h4{font-size:.8rem; font-weight:700; color:var(--blue); text-transform:uppercase; letter-spacing:.05em; margin:0 0 12px;}
+  .req-note{background:var(--blue-tint); border-radius:14px; padding:16px 20px; font-size:.88rem; color:var(--ink); margin-top:18px;}
+
+  /* ===================== TIMELINE ===================== */
+  .roadmap{
+    overflow-x:auto; -webkit-overflow-scrolling:touch; margin:0 0 6px; padding:22px 4px 12px;
+    scrollbar-width:thin;
+  }
+  .roadmap-row{display:flex; align-items:flex-start; min-width:max-content;}
+  .rm-item{
+    display:flex; flex-direction:column; align-items:flex-start; width:216px; flex:none; padding:0 6px;
+  }
+  .rm-item.rm-item-end{width:216px;}
+  .node-circle{
+    width:38px; height:38px; border-radius:50%; background:var(--blue); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-weight:700; font-size:.94rem;
+    margin-bottom:16px; box-shadow:0 0 0 5px var(--paper); position:relative; z-index:2;
+  }
+  .node-circle-b{background:var(--ink);}
+  .rm-item h4{font-size:1rem; font-weight:700; margin:0 0 8px; letter-spacing:-0.01em; line-height:1.4;}
+  .rm-item p{color:var(--ink-soft); font-size:.84rem; margin:0; line-height:1.65;}
+  .rm-arrow{
+    flex:none; width:30px; display:flex; align-items:center; justify-content:center;
+    padding-top:19px; color:var(--line); margin-top:-1px;
+  }
+  .roadmap-hint{
+    font-size:.72rem; color:var(--ink-faint); text-align:center; margin:10px 0 0;
+  }
+  @media (min-width:900px){ .roadmap-hint{display:none;} }
+  @media (max-width:640px){
+    .rm-item{width:170px;}
+    .rm-arrow{width:22px;}
+  }
+
+  .notice-box{
+    background:var(--ink); color:#fff; border-radius:22px; padding:34px 36px; margin-top:36px;
+  }
+  .notice-box .eyebrow{color:var(--blue-light);}
+  .notice-box ul{margin:16px 0 0; padding-left:0; list-style:none;}
+  .notice-box li{padding:11px 0; border-bottom:1px solid rgba(255,255,255,0.14); font-size:.94rem; color:#EDEDED; display:flex; gap:12px;}
+  .notice-box li:last-child{border-bottom:none;}
+  .notice-box li::before{content:"→"; color:var(--blue-light); flex:none;}
+
+  /* ===================== BONUS ===================== */
+  .bonus-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:32px;}
+  @media (max-width:760px){ .bonus-grid{grid-template-columns:1fr;} }
+  .bonus-card{background:#fff; border:1px solid var(--line-soft); border-radius:22px; padding:30px; box-shadow:var(--shadow-sm);}
+  .bonus-card h4{font-size:.8rem; font-weight:700; color:var(--blue); text-transform:uppercase; letter-spacing:.05em; margin:0 0 18px;}
+  .merit-list,.steps-mini{list-style:none; padding:0; margin:0;}
+  .merit-list li{display:flex; align-items:flex-start; gap:12px; padding:11px 0; border-bottom:1px solid var(--line-soft); font-size:.94rem;}
+  .merit-list li:last-child{border-bottom:none;}
+  .merit-list li::before{content:""; width:6px; height:6px; border-radius:50%; background:var(--blue); margin-top:8px; flex:none;}
+  .steps-mini{counter-reset:mini;}
+  .steps-mini li{counter-increment:mini; padding:11px 0; border-bottom:1px solid var(--line-soft); font-size:.94rem; display:flex; gap:14px;}
+  .steps-mini li:last-child{border-bottom:none;}
+  .steps-mini li::before{content:counter(mini); font-weight:700; color:var(--blue); flex:none; width:18px;}
+  .bonus-links{margin-top:20px; display:flex; flex-direction:column; gap:10px;}
+  .bonus-links a{font-size:.86rem; color:var(--blue); font-weight:500; width:fit-content;}
+  .bonus-links a:hover{text-decoration:underline;}
+  .section-head-row{
+    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;
+    margin:.5em 0 .8em;
+  }
+  .section-head-row.sub{margin-top:72px;}
+  .section-head-row h3.sub-title{margin:0;}
+  .mypage-pill{
+    display:inline-flex; align-items:center; gap:8px; font-size:.82rem; font-weight:600;
+    color:var(--blue); background:var(--blue-tint); padding:9px 18px; border-radius:980px;
+    white-space:nowrap; transition:.2s ease;
+  }
+  .mypage-pill:hover{background:var(--blue-tint2);}
+  .steps-vert{display:flex; flex-direction:column;}
+  .step-vert{
+    display:grid; grid-template-columns:40px 1fr; gap:18px; padding:20px 0;
+    border-bottom:1px solid var(--line-soft);
+  }
+  .step-vert:last-child{border-bottom:none;}
+  .step-vert .dot{
+    width:38px; height:38px; border-radius:50%; background:var(--blue); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-size:.94rem; font-weight:700;
+  }
+  .step-vert.b .dot{background:var(--ink);}
+  .step-vert h4{margin:0 0 6px; font-size:1rem; font-weight:700; letter-spacing:-0.01em; line-height:1.4;}
+  .step-vert p{margin:0; color:var(--ink-soft); font-size:.9rem; line-height:1.7;}
+
+  .gantt-wrap{
+    margin:30px 0 10px; border:1px solid var(--line-soft); border-radius:18px;
+    background:#fff; box-shadow:var(--shadow-sm); padding:24px 24px 18px; overflow-x:auto;
+  }
+  .gantt-head{font-size:.78rem; font-weight:700; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.06em; margin-bottom:16px;}
+  .gantt{display:grid; column-gap:6px; row-gap:12px; min-width:620px; align-items:center;}
+  .gantt .gh{font-size:.68rem; color:var(--ink-faint); text-align:center; padding-bottom:10px; border-bottom:1px solid var(--line-soft); grid-row:1; align-self:end;}
+  .gantt .gl{font-size:.84rem; font-weight:600; color:var(--ink); grid-column:1; padding-right:10px; line-height:1.5;}
+  .gantt .gbar{
+    height:26px; border-radius:999px; background:var(--blue); opacity:.85;
+    display:flex; align-items:center; padding:0 12px; font-size:.68rem; color:#fff;
+    font-weight:600; white-space:nowrap; overflow:hidden;
+  }
+  .gantt .gbar.strong{background:var(--ink); opacity:1;}
+  .gantt .gdot-wrap{display:flex; justify-content:center;}
+  .gantt .gdot{width:13px; height:13px; background:var(--ink); border-radius:4px; transform:rotate(45deg); flex:none;}
+  .gantt .gdots-row{display:flex; justify-content:space-between; align-items:center;}
+  .gantt-legend{display:flex; gap:22px; flex-wrap:wrap; margin-top:18px; font-size:.76rem; color:var(--ink-faint);}
+  .gantt-legend span{display:inline-flex; align-items:center; gap:7px;}
+  .gantt-legend i{width:16px; height:10px; border-radius:999px; background:var(--blue); opacity:.85; display:inline-block;}
+  .gantt-legend i.strong{background:var(--ink); opacity:1; border-radius:4px; transform:rotate(45deg); width:10px; height:10px;}
+  .gantt-note{font-size:.76rem; color:var(--ink-faint); margin-top:12px;}
+
+  .phase-label{
+    font-size:.78rem; font-weight:700; color:var(--ink-faint); text-transform:uppercase;
+    letter-spacing:.06em; margin:36px 0 14px;
+  }
+  .phase-label:first-of-type{margin-top:0;}
+  .phase-label-b{margin-top:20px;}
+  .fine-print{font-size:.8rem; color:var(--ink-faint); margin-top:16px;}
+  .badge-must{display:inline-block; font-size:.66rem; font-weight:600; padding:3px 10px; border-radius:980px; background:var(--blue); color:#fff; margin-bottom:12px; letter-spacing:.02em;}
+  .other-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:26px;}
+  @media (max-width:900px){ .other-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:560px){ .other-grid{grid-template-columns:1fr;} }
+  .other-item{background:#fff; border:1px solid var(--line-soft); border-radius:16px; padding:16px 18px;}
+  .other-item b{display:block; font-size:.92rem; font-weight:600; margin-bottom:3px;}
+  .other-item span{font-size:.8rem; color:var(--ink-soft); line-height:1.6; display:block;}
+
+  /* ===================== DOCS ===================== */
+  .docs-head{display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:22px; margin-bottom:34px;}
+  .tabs{display:inline-flex; background:var(--bg-soft); border-radius:980px; padding:4px;}
+  .tab-btn{
+    font-weight:600; font-size:.86rem; padding:10px 22px; border-radius:980px; border:none;
+    background:transparent; cursor:pointer; color:var(--ink-soft); transition:.2s ease; font-family:inherit;
+  }
+  .tab-btn.active{background:#fff; color:var(--ink); box-shadow:var(--shadow-sm);}
+
+  .progress-widget{display:flex; align-items:center; gap:16px;}
+  .ring{width:52px; height:52px; position:relative;}
+  .ring svg{transform:rotate(-90deg); width:52px; height:52px;}
+  .ring circle{fill:none; stroke-width:4;}
+  .ring .bg{stroke:var(--line-soft);}
+  .ring .fg{stroke:var(--blue); stroke-linecap:round; transition:stroke-dashoffset .4s ease;}
+  .ring-label{position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:.66rem; font-weight:700;}
+  .progress-text{font-size:.84rem; color:var(--ink-soft);}
+  .progress-text b{color:var(--ink); font-weight:700;}
+
+  .doc-panel{animation:fade .35s ease;}
+  @keyframes fade{from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);}}
+
+  .doc-note{
+    font-size:.88rem; color:var(--ink-soft); background:var(--bg-soft); border:1px solid var(--line-soft);
+    padding:14px 18px; border-radius:14px; margin-bottom:28px; display:flex; align-items:center; gap:10px;
+  }
+  .doc-note::before{
+    content:""; width:18px; height:18px; border-radius:50%; background:var(--blue); flex:none;
+    -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z'/%3E%3C/svg%3E") center/60% no-repeat;
+    mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z'/%3E%3C/svg%3E") center/60% no-repeat;
+  }
+
+  .doc-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px;}
+  .doc-item{
+    background:#fff; border:1px solid var(--line-soft); border-radius:18px; padding:20px 22px;
+    display:grid; grid-template-columns:38px 1fr auto; gap:18px; align-items:center;
+    transition:border-color .2s ease, box-shadow .2s ease;
+  }
+  .doc-item:hover{box-shadow:var(--shadow-sm);}
+  @media (max-width:640px){
+    .doc-item{grid-template-columns:30px 1fr;}
+    .doc-item .doc-action{grid-column:1 / -1; margin-top:6px;}
+  }
+  .doc-item.optional{background:var(--bg-soft2); opacity:.86; box-shadow:none;}
+  .doc-item.optional:hover{box-shadow:none;}
+  .doc-item.optional .doc-body h5{font-size:.92rem; font-weight:500; color:var(--ink-soft);}
+  .doc-item.optional .doc-body .fmt{font-size:.8rem;}
+  .cond-divider{
+    margin:30px 0 4px; padding-top:26px; border-top:1px solid var(--line-soft);
+    display:flex; flex-direction:column; gap:4px;
+  }
+  .cond-divider span{
+    font-size:.74rem; font-weight:700; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.06em;
+  }
+  .cond-divider p{font-size:.84rem; color:var(--ink-soft); margin:0;}
+  .cond-contact{
+    font-size:.78rem; font-weight:500; color:var(--ink-faint); white-space:nowrap;
+  }
+  .doc-body h5{margin:0 0 6px; font-size:1rem; font-weight:600; display:flex; align-items:center; gap:10px; flex-wrap:wrap; letter-spacing:-0.005em;}
+  .doc-body h5 .badge{
+    font-size:.66rem; font-weight:600; padding:3px 10px; border-radius:980px;
+    background:#FFF4E5; color:#B26A00;
+  }
+  .doc-body .fmt{font-size:.85rem; color:var(--ink-soft); margin:0 0 6px;}
+  .doc-body .caveat{font-size:.8rem; color:#B26A00; margin:0;}
+  .doc-action a, .doc-action button{
+    font-size:.8rem; font-weight:600; white-space:nowrap; color:var(--blue); background:transparent;
+    border:1.4px solid var(--blue); padding:8px 16px; border-radius:980px;
+    transition:.2s ease; display:inline-block; cursor:pointer; font-family:inherit;
+  }
+  .doc-action a:hover, .doc-action button:hover{background:var(--blue); color:#fff;}
+  .check{
+    width:24px; height:24px; border:1.6px solid var(--line); border-radius:50%;
+    cursor:pointer; position:relative; flex:none; background:#fff; margin-top:2px;
+    transition:.2s ease;
+  }
+  .check:hover{border-color:var(--blue);}
+  .check.checked{background:var(--ok); border-color:var(--ok);}
+  .check.checked::after{
+    content:""; position:absolute; left:7px; top:3px; width:6px; height:11px;
+    border-right:2px solid #fff; border-bottom:2px solid #fff; transform:rotate(40deg);
+  }
+  .doc-item.done{border-color:var(--ok-soft);}
+  .doc-item.done .doc-body h5{color:var(--ok); text-decoration:line-through; text-decoration-color:var(--ok);}
+
+  /* ===================== FOOTER ===================== */
+  footer{background:var(--bg-soft); padding:56px 22px 40px; margin-top:20px; padding-bottom:calc(40px + env(safe-area-inset-bottom,0px));}
+  .footer-inner{max-width:1180px; margin:0 auto;}
+  .footer-top{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:18px;
+    padding-bottom:28px; border-bottom:1px solid var(--line-soft); margin-bottom:22px;
+  }
+  .footer-top .brand{font-size:.95rem;}
+  .back-top{font-size:.78rem; color:var(--ink-soft); border:1px solid var(--line); padding:8px 16px; border-radius:980px;}
+  .back-top:hover{border-color:var(--ink); color:var(--ink);}
+  footer p.copy{font-size:.76rem; color:var(--ink-faint); margin:0;}
+
+  @media (max-width:900px){
+    .nav-cta{display:none;}
+  }
+
+  /* ===================== MANUAL OVERLAY ===================== */
+  .manual-backdrop{
+    position:fixed; inset:0; background:rgba(0,0,0,0.55);
+    opacity:0; pointer-events:none; transition:opacity .3s ease; z-index:198;
+    backdrop-filter:blur(6px);
+  }
+  .manual-backdrop.open{opacity:1; pointer-events:auto;}
+
+  .manual-modal{
+    position:fixed; left:50%; top:50%; z-index:199;
+    width:min(640px, 92vw); max-height:min(82vh, 760px);
+    background:#fff; border-radius:26px; overflow:hidden;
+    display:flex; flex-direction:column;
+    box-shadow:0 30px 80px rgba(0,0,0,0.35);
+    opacity:0; pointer-events:none;
+    transform:translate(-50%,-46%) scale(0.96);
+    transition:opacity .32s cubic-bezier(.2,.9,.25,1), transform .32s cubic-bezier(.2,.9,.25,1);
+  }
+  .manual-modal.open{opacity:1; pointer-events:auto; transform:translate(-50%,-50%) scale(1);}
+
+  .manual-head{
+    display:flex; align-items:flex-start; justify-content:space-between; gap:20px;
+    padding:30px 30px 22px; border-bottom:1px solid var(--line-soft); flex:none;
+  }
+  .manual-head .m-eyebrow{font-size:.78rem; font-weight:600; color:var(--blue); display:block; margin-bottom:6px;}
+  .manual-head h3{font-size:1.36rem; font-weight:700; letter-spacing:-0.02em; margin:0; line-height:1.35;}
+  .manual-close{
+    width:34px; height:34px; border-radius:50%; border:none; background:var(--bg-soft);
+    cursor:pointer; position:relative; flex:none; transition:background .2s ease;
+  }
+  .manual-close:hover{background:var(--line-soft);}
+  .manual-close::before,.manual-close::after{
+    content:""; position:absolute; left:10px; top:16px; width:14px; height:1.6px; background:var(--ink);
+  }
+  .manual-close::before{transform:rotate(45deg);}
+  .manual-close::after{transform:rotate(-45deg);}
+
+  .manual-body{padding:26px 30px 34px; overflow-y:auto;}
+  .manual-body p{color:var(--ink-soft); font-size:.96rem; margin:0 0 14px;}
+  .manual-lede{color:var(--ink); font-size:1.02rem; font-weight:500; margin-bottom:22px;}
+  .manual-body p.manual-lede{color:var(--ink);}
+
+  .manual-check{list-style:none; margin:0 0 22px; padding:0; display:flex; flex-direction:column; gap:2px;}
+  .manual-check li{
+    display:flex; align-items:flex-start; gap:12px; padding:12px 4px;
+    border-bottom:1px solid var(--line-soft); font-size:.92rem; color:var(--ink);
+  }
+  .manual-check li:last-child{border-bottom:none;}
+  .manual-check li::before{
+    content:"✓"; color:var(--ok); font-weight:700; font-size:.8rem; flex:none;
+    width:20px; height:20px; border-radius:50%; background:var(--ok-soft);
+    display:flex; align-items:center; justify-content:center; margin-top:1px;
+  }
+
+  .manual-fields{list-style:none; margin:0 0 22px; padding:0; display:flex; flex-direction:column; gap:16px;}
+  .manual-fields li{border-bottom:1px solid var(--line-soft); padding-bottom:16px;}
+  .manual-fields li:last-child{border-bottom:none; padding-bottom:0;}
+  .manual-fields .mf-label{
+    display:flex; align-items:center; gap:10px; font-weight:700; font-size:.9rem; color:var(--ink); margin-bottom:6px;
+  }
+  .manual-fields .mf-label::before{
+    content:"✓"; color:var(--ok); font-weight:700; font-size:.7rem; flex:none;
+    width:18px; height:18px; border-radius:50%; background:var(--ok-soft);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .manual-fields .mf-desc{font-size:.86rem; color:var(--ink-soft); line-height:1.7; padding-left:28px; display:block;}
+
+  .manual-section-title{
+    font-size:.76rem; font-weight:700; color:var(--ink-faint); text-transform:uppercase;
+    letter-spacing:.06em; margin:22px 0 10px;
+  }
+  .manual-note{
+    background:var(--bg-soft); border-radius:14px; padding:16px 18px; font-size:.86rem;
+    color:var(--ink-soft); margin:18px 0;
+  }
+  .manual-note b{color:var(--ink);}
+  .manual-warn{
+    background:#FFF4E5; border-radius:14px; padding:16px 18px; font-size:.86rem;
+    color:#8A5300; margin:18px 0;
+  }
+  .manual-actions{display:flex; flex-direction:column; gap:10px; margin-top:22px;}
+  .manual-btn{
+    display:flex; align-items:center; justify-content:center; gap:8px;
+    padding:14px 20px; border-radius:980px; font-size:.92rem; font-weight:600;
+    background:var(--blue); color:#fff; transition:.2s ease; text-align:center;
+    border:none; cursor:pointer; font-family:inherit; -webkit-appearance:none; appearance:none;
+    width:100%; box-sizing:border-box; line-height:1.3;
+  }
+  .manual-btn:focus-visible{outline:2px solid var(--blue); outline-offset:2px;}
+  .manual-btn:hover{background:var(--blue-deep);}
+  .manual-btn.secondary{background:var(--bg-soft); color:var(--ink);}
+  .manual-btn.secondary:hover{background:var(--line-soft);}
+  .manual-btn[aria-disabled="true"]{opacity:.45; cursor:not-allowed;}
+  .manual-caps{
+    display:flex; gap:18px; font-size:.78rem; color:var(--ink-faint); margin-top:16px; flex-wrap:wrap;
+  }
+
+  .manual-back{
+    display:inline-flex; align-items:center; gap:6px; font-size:.82rem; font-weight:600;
+    color:var(--blue); margin-bottom:18px; cursor:pointer; background:none; border:none; padding:0; font-family:inherit;
+  }
+  .manual-back svg{transition:transform .2s ease;}
+  .manual-back:hover svg{transform:translateX(-3px);}
+  .step-flow{list-style:none; margin:0; padding:0; position:relative;}
+  .step-flow::before{
+    content:""; position:absolute; left:17px; top:8px; bottom:8px; width:1.4px; background:var(--line-soft);
+  }
+  .step-flow-item{position:relative; padding:0 0 28px 52px; min-height:1px;}
+  .step-flow-item:last-child{padding-bottom:4px;}
+  .step-flow-num{
+    position:absolute; left:0; top:0; width:36px; height:36px; border-radius:50%;
+    background:var(--blue); color:#fff; font-weight:700; font-size:.92rem;
+    display:flex; align-items:center; justify-content:center; z-index:1;
+  }
+  .step-flow-item h4{margin:6px 0 6px; font-size:.98rem; font-weight:700; letter-spacing:-0.01em;}
+  .step-flow-item p{margin:0; font-size:.88rem; color:var(--ink-soft);}
+  .step-flow-tag{
+    display:inline-block; font-size:.68rem; font-weight:600; color:var(--blue);
+    background:var(--blue-tint); padding:2px 10px; border-radius:980px; margin-bottom:8px;
+  }
+
+  .mock-frame{
+    margin-top:16px; border:1px solid var(--line-soft); border-radius:16px;
+    overflow:hidden; box-shadow:var(--shadow-sm); background:#fff;
+  }
+  .mock-bar{
+    height:32px; background:var(--bg-soft); display:flex; align-items:center; gap:6px; padding:0 14px;
+    border-bottom:1px solid var(--line-soft);
+  }
+  .mock-dot{width:8px; height:8px; border-radius:50%; background:var(--line);}
+  .mock-body{padding:22px 20px 20px;}
+  .mock-field{position:relative; margin-bottom:16px;}
+  .mock-field:last-child{margin-bottom:0;}
+  .mock-label{font-size:.72rem; color:var(--ink-faint); font-weight:600; margin-bottom:6px; display:block;}
+  .mock-input{
+    border:1.4px solid var(--line); border-radius:10px; padding:11px 14px; font-size:.86rem;
+    color:var(--ink-soft); background:var(--bg-soft2); position:relative;
+  }
+  .mock-input.checkbox-row{display:flex; align-items:center; gap:10px; color:var(--ink);}
+  .mock-checkbox{width:16px; height:16px; border-radius:4px; border:1.6px solid var(--blue); background:var(--blue); flex:none; position:relative;}
+  .mock-checkbox::after{content:"";position:absolute; left:4px; top:1px; width:4px; height:8px; border-right:2px solid #fff; border-bottom:2px solid #fff; transform:rotate(40deg);}
+  .mock-btn{
+    background:var(--blue); color:#fff; border-radius:980px; padding:10px 22px;
+    font-size:.84rem; font-weight:600; display:inline-block; text-align:center; position:relative;
+  }
+  .mock-callout{
+    position:absolute; right:-8px; top:-8px; width:20px; height:20px; border-radius:50%;
+    background:var(--ink); color:#fff; font-size:.66rem; font-weight:700;
+    display:flex; align-items:center; justify-content:center; transform:translate(50%,-50%); z-index:2;
+  }
+  .mock-legend{margin-top:14px; display:flex; flex-direction:column; gap:6px;}
+  .mock-legend-item{display:flex; align-items:flex-start; gap:10px; font-size:.82rem; color:var(--ink-soft);}
+  .mock-legend-num{
+    width:18px; height:18px; border-radius:50%; background:var(--ink); color:#fff; font-size:.64rem; font-weight:700;
+    display:flex; align-items:center; justify-content:center; flex:none; margin-top:1px;
+  }
+  :focus-visible{outline:2px solid var(--blue); outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar-backdrop" id="backdrop"></div>
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-head">
+    <div class="brand"><span class="dot"></span>申請サポートガイド</div>
+    <button class="sidebar-close" id="sidebarClose" aria-label="閉じる"></button>
+  </div>
+  <ul class="sidebar-list">
+    <li><a href="#" class="side-link scroll-top-link">ホーム</a></li>
+    <li><a href="#about" class="side-link">新もの補助金とは</a></li>
+    <li><a href="#schedule" class="side-link">応募申請〜事業化状況報告までの流れ</a></li>
+    <li><a href="#bonus" class="side-link">加点項目</a></li>
+    <li><a href="#docs" class="side-link">必要書類 <span class="chev">›</span></a></li>
+  </ul>
+  <ul class="sidebar-sub">
+    <li><a href="#docs" class="side-link" data-tab-target="corp">法人</a></li>
+    <li><a href="#docs" class="side-link" data-tab-target="individual">個人事業主</a></li>
+  </ul>
+  <div class="sidebar-divider"></div>
+  <ul class="sidebar-list">
+    <li><a href="https://ryouritsu.mhlw.go.jp/hiroba/" target="_blank" rel="noopener">両立支援のひろば ↗</a></li>
+    <li><a href="https://www.keizokuryoku.go.jp/" target="_blank" rel="noopener">事業継続力強化計画 マイページ ↗</a></li>
+    <li><a href="https://mirasapo-connect.go.jp/corporation" target="_blank" rel="noopener">成長加速マッチングサービス ↗</a></li>
+    <li><a href="https://www.biz-partnership.jp/index.html" target="_blank" rel="noopener">パートナーシップ構築宣言 ↗</a></li>
+  </ul>
+  <div class="sidebar-divider"></div>
+  <ul class="sidebar-list">
+    <li><a href="https://shinjigyou-monodukuri.smrj.go.jp/" target="_blank" rel="noopener">新もの補助金 公式HP ↗</a></li>
+  </ul>
+  <div class="sidebar-foot">Copyright © All Rights Reserved. 無断転載・複製を禁じます。</div>
+</aside>
+
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <div class="nav-left">
+      <button class="burger" id="burgerBtn" aria-label="メニュー"><span></span><span></span><span></span></button>
+      <div class="brand"><span class="dot"></span>申請サポートガイド</div>
+    </div>
+    <nav class="pills">
+      <a href="#about">制度とは</a>
+      <a href="#schedule">スケジュール</a>
+      <a href="#bonus">加点項目</a>
+      <a href="#docs">必要書類</a>
+    </nav>
+    <div class="nav-right">
+      <div class="mypage-group">
+        <button class="mypage-toggle" id="mypageToggle">マイページ <svg width="9" height="6" viewBox="0 0 9 6" fill="none"><path d="M1 1L4.5 5L8 1" stroke="currentColor" stroke-width="1.4"/></svg></button>
+        <div class="mypage-menu" id="mypageMenu">
+          <div class="mp-off"><span>新もの補助金 マイページ</span><span class="mp-sub">電子申請システム（URL公開後に設定）</span></div>
+          <a href="https://ryouritsu.mhlw.go.jp/hiroba/" target="_blank" rel="noopener">
+            <span>両立支援のひろば</span><span class="mp-sub">一般事業主行動計画の策定・公表</span>
+          </a>
+          <a href="https://www.keizokuryoku.go.jp/" target="_blank" rel="noopener">
+            <span>事業継続力強化計画 マイページ</span><span class="mp-sub">電子申請システム</span>
+          </a>
+          <a href="https://mirasapo-connect.go.jp/corporation" target="_blank" rel="noopener">
+            <span>成長加速マッチングサービス</span><span class="mp-sub">登録・挑戦課題の確認</span>
+          </a>
+          <a href="https://www.biz-partnership.jp/index.html" target="_blank" rel="noopener">
+            <span>パートナーシップ構築宣言</span><span class="mp-sub">ポータルサイト</span>
+          </a>
+        </div>
+      </div>
+      <a class="nav-cta" href="#docs">書類を確認する</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <span class="eyebrow">新事業進出・ものづくり商業サービス補助金</span>
+      <h1 class="hero-title">申請サポート<span>ガイド</span></h1>
+      <p class="hero-lead">補助事業者様が迷わず申請を進められるよう、必要書類と手続きの流れをこのページ一つにまとめました。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#docs">必要書類を確認する</a>
+        <a class="btn btn-ghost" href="#about">制度について知る</a>
+      </div>
+
+      <div class="hero-cards">
+        <a class="path-card" href="#docs" data-tab-target="corp">
+          <span class="num">法人</span>
+          <h3>法人の方</h3>
+          <p>決算書・履歴事項全部証明書・労働者名簿など全<span data-count="corp"></span>項目の必要書類をご案内します。</p>
+          <span class="go">必要書類を見る
+            <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.3"/></svg>
+          </span>
+        </a>
+        <a class="path-card" href="#docs" data-tab-target="individual">
+          <span class="num">個人事業主</span>
+          <h3>個人事業主の方</h3>
+          <p>確定申告書・決算書類など全<span data-count="individual"></span>項目の必要書類をご案内します。</p>
+          <span class="go">必要書類を見る
+            <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.3"/></svg>
+          </span>
+        </a>
+      </div>
+
+      <p class="hero-official">公式情報はこちら：<a href="https://shinjigyou-monodukuri.smrj.go.jp/" target="_blank" rel="noopener">新事業進出・ものづくり商業サービス補助金 公式サイト ↗</a></p>
+    </div>
+  </section>
+
+  <section class="soft" id="about">
+    <div class="inner">
+      <span class="eyebrow">About</span>
+      <h2 class="title">新事業進出・ものづくり商業サービス補助金とは</h2>
+      <div class="about-grid">
+        <div class="about-copy">
+          <p>技術的革新性のある新製品・サービスの開発や、既存事業とは異なる新市場・高付加価値事業への進出、海外市場開拓に向けた国内の製造・提供体制の強化を行う際に利用できる補助制度です。</p>
+          <div class="quote">企業規模の拡大と付加価値の向上を通じて、生産性向上と賃上げにつなげることを目的としています。</div>
+          <p>申請から補助金の着金、そしてその後の事業化状況報告までを含めると、中長期的な取り組みが前提となる制度です。まずは全体像を把握したうえで、必要書類のご準備を進めてください。</p>
+        </div>
+        <div class="diagram">
+          <span class="diagram-label">What it supports</span>
+          <div class="diagram-node"><span class="dot"></span><div><b>新製品・サービス開発</b><span>革新的な製品・サービスの開発</span></div></div>
+          <div class="diagram-node"><span class="dot"></span><div><b>新事業進出</b><span>新市場・高付加価値事業への挑戦</span></div></div>
+          <div class="diagram-node"><span class="dot"></span><div><b>海外市場開拓</b><span>輸出に向けた国内体制の強化</span></div></div>
+          <div class="diagram-node"><span class="dot"></span><div><b>賃上げ促進</b><span>成果を従業員へ還元する仕組みづくり</span></div></div>
+        </div>
+      </div>
+
+      <h3 class="sub-title">3つの補助対象事業枠</h3>
+      <p class="lead">取り組む内容によって、あてはまる枠が変わります。</p>
+      <div class="frame-grid">
+        <div class="frame-card"><span class="tag">枠①</span><h4>革新的新製品・サービス枠</h4><p>革新的な新製品・新サービスの開発。既存製品の生産プロセス改善のみは対象外です。</p></div>
+        <div class="frame-card"><span class="tag">枠②</span><h4>新事業進出枠</h4><p>既存事業とは異なる新市場・高付加価値事業への進出。「製品等の新規性」と「市場の新規性」の両方が必要です。</p></div>
+        <div class="frame-card"><span class="tag">枠③</span><h4>グローバル枠</h4><p>自社製品を活用した自発的な新規海外販路開拓のための、国内製造等拠点の強化。</p></div>
+      </div>
+      <div class="table-wrap">
+        <table class="cmp">
+          <tr><th></th><th>①革新的新製品・サービス枠</th><th>②新事業進出枠</th><th>③グローバル枠</th></tr>
+          <tr><td class="lb">補助率</td><td>中小企業者 1/2（特例 2/3）<br>小規模・再生事業者 2/3</td><td>1/2（特例 2/3）</td><td>2/3</td></tr>
+          <tr><td class="lb">補助上限額</td><td>750万〜2,500万円<br>（賃上げ特例 〜3,500万円）</td><td>2,500万〜7,000万円<br>（賃上げ特例 〜9,000万円）</td><td>2,500万〜7,000万円<br>（賃上げ特例 〜9,000万円）</td></tr>
+          <tr><td class="lb">補助下限額</td><td>100万円</td><td>750万円</td><td>750万円</td></tr>
+          <tr><td class="lb">必須の経費区分</td><td>機械装置・システム構築費</td><td>機械装置・システム構築費 または 建物費</td><td>機械装置・システム構築費 または 建物費</td></tr>
+          <tr><td class="lb">実施期間</td><td>交付決定日から10か月以内</td><td colspan="2">交付決定日から14か月以内</td></tr>
+        </table>
+      </div>
+
+      <h3 class="sub-title">達成が求められる要件</h3>
+      <p class="lead">補助事業終了後、3〜5年の事業計画期間を通じて達成する要件です。未達成の場合は補助金の返還が生じることがあります。</p>
+      <div class="req-grid">
+        <div class="req-card">
+          <h4>基本要件</h4>
+          <div class="diagram-node"><span class="dot"></span><div><b>付加価値額</b><span>年平均成長率 +4.0%以上の目標を策定・達成</span></div></div>
+          <div class="diagram-node"><span class="dot"></span><div><b>賃上げ</b><span>一人当たり給与支給総額の年平均成長率 +3.5%以上</span></div></div>
+          <div class="diagram-node"><span class="dot"></span><div><b>事業場内最低賃金</b><span>地域別最低賃金より +30円以上高い水準を維持</span></div></div>
+        </div>
+        <div class="req-card">
+          <h4>あわせて必要な要件</h4>
+          <div class="diagram-node"><span class="dot"></span><div><b>ワークライフバランス</b><span>次世代法に基づく一般事業主行動計画を「両立支援のひろば」に公表（反映まで1〜2週間）<br><a href="https://ryouritsu.mhlw.go.jp/hiroba/" target="_blank" rel="noopener" style="color:var(--blue); font-weight:600;">両立支援のひろば で策定・公表する ↗</a></span></div></div>
+          <div class="diagram-node"><span class="dot"></span><div><b>子育て等の職場環境整備</b><span>定められた3つの取り組みから1つを実施（くるみん系認定取得者は免除）</span></div></div>
+          <div class="diagram-node"><span class="dot"></span><div><b>金融機関</b><span>資金提供を受ける場合は、金融機関による事業計画の確認書が必要</span></div></div>
+        </div>
+      </div>
+      <div class="req-note"><b>賃上げ特例（任意）</b>：一人当たり給与支給総額 年平均 +6.0%以上、かつ事業場内最低賃金 年 +50円以上を達成する場合、補助上限額が引き上げられます。あわせて「地域別最低賃金引上げ特例」もあります。</div>
+      <p class="fine-print">「中小企業新事業進出補助金」「ものづくり・商業・サービス生産性向上促進補助金」は、本補助金とは別の制度です。名称が似ているためご注意ください。</p>
+    </div>
+  </section>
+
+  <section id="schedule">
+    <span class="eyebrow">Schedule</span>
+    <h2 class="title">応募申請〜事業化状況報告までの流れ</h2>
+    <p class="lead">新事業進出・ものづくり商業サービス補助金 公式サイトの「スケジュール」に基づく9ステップに、必要書類の準備・加点の申請を加えた流れです（第1回公募）。申請して終わりではなく、着金後も5年間の報告義務がある制度だとご理解のうえお取り組みください。</p>
+
+    <div class="phase-label">交付決定まで</div>
+    <div class="steps-vert">
+      <div class="step-vert"><div class="dot">1</div><div><h4>GビズID取得</h4><p>電子申請のためGビズIDプライムアカウントが必要です。取得に時間がかかるため早めに準備してください。</p></div></div>
+      <div class="step-vert"><div class="dot">2</div><div><h4>必要書類の準備と加点の申請</h4><p>決算書や労働者名簿などの必要書類を準備するとともに、パートナーシップ構築宣言・事業継続力強化計画・成長加速マッチングサービスなど、加点を希望する制度の手続きを進めます。認定・登録まで時間がかかるものもあるため、早めに着手してください。</p></div></div>
+      <div class="step-vert"><div class="dot">3</div><div><h4>事業計画書作成</h4><p>事業計画・財務情報／収益計画・資金調達表／補助対象予定経費・スケジュールの4点を作成します。</p></div></div>
+      <div class="step-vert"><div class="dot">4</div><div><h4>応募申請</h4><p>電子申請システムのみで受付。申請受付は2026/9/30〜、応募締切は2026/10/30 18:00（厳守）です。</p></div></div>
+      <div class="step-vert"><div class="dot">5</div><div><h4>採択結果発表</h4><p>2027年1月頃の発表予定です。</p></div></div>
+      <div class="step-vert"><div class="dot">6</div><div><h4>交付申請</h4><p>採択発表日から2か月以内に、電子申請システムで交付申請を行います。審査を経て交付決定となります。</p></div></div>
+    </div>
+
+    <div class="phase-label phase-label-b">交付決定後</div>
+    <div class="steps-vert">
+      <div class="step-vert b"><div class="dot">7</div><div><h4>補助事業実施</h4><p>枠①：交付決定日から10か月以内。枠②③：交付決定日から14か月以内に、契約・納品・支払いまで完了させます。</p></div></div>
+      <div class="step-vert b"><div class="dot">8</div><div><h4>実績報告</h4><p>事業完了日から30日を経過した日、または完了期限日のいずれか早い日までに実績報告書を提出します。</p></div></div>
+      <div class="step-vert b"><div class="dot">9</div><div><h4>補助金交付（着金）</h4><p>実績報告をもとに補助額が確定した後、精算払の請求を行うと補助金が交付されます。満額とは限りません。</p></div></div>
+      <div class="step-vert b"><div class="dot">10</div><div><h4>事業化状況報告</h4><p>補助事業完了年度の翌年度から5年間・計6回、事業化の状況等を報告する必要があります。</p></div></div>
+    </div>
+
+    <div class="notice-box">
+      <span class="eyebrow">留意事項</span>
+      <ul>
+        <li>応募申請から採択発表まで約3か月、交付申請から交付決定までを含めると、着金までに1年以上かかることが一般的です。</li>
+        <li>交付決定を受ける前に契約・発注した費用は補助対象になりません。必ず交付決定後に発注してください。</li>
+        <li>着金後も「事業計画期間」として原則3〜5年、毎年の報告が必要です。要件未達の場合は補助金返還が発生することがあります。</li>
+      </ul>
+    </div>
+    <p class="fine-print" style="margin-top:14px;">出典：<a href="https://shinjigyou-monodukuri.smrj.go.jp/schedule/" target="_blank" rel="noopener" style="color:var(--blue);">スケジュール（新事業進出・ものづくり商業サービス補助金 公式サイト）↗</a></p>
+  </section>
+
+  <section class="soft" id="bonus">
+    <div class="inner">
+      <span class="eyebrow">Bonus Point</span>
+      <h2 class="title">加点項目</h2>
+      <p class="lead">審査では、一定の要件を満たす事業者に加点があります（申請締切日時点で満たしている必要があります）。当社でサポートしている次の3項目は、必要書類チェックリストでも「必須」としてご案内しています。</p>
+
+      <!-- パートナーシップ構築宣言 -->
+      <div class="section-head-row sub">
+        <div>
+          <span class="badge-must">必須</span>
+          <h3 class="sub-title">パートナーシップ構築宣言とは</h3>
+        </div>
+        <a href="https://www.biz-partnership.jp/index.html" target="_blank" rel="noopener" class="mypage-pill">
+          ポータルサイト
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <p class="lead">サプライチェーン全体の共存共栄や、取引先との望ましい取引慣行の遵守を、企業の代表者名で宣言する制度です。宣言は「パートナーシップ構築宣言」ポータルサイトで公表されます。</p>
+      <div class="bonus-grid">
+        <div class="bonus-card">
+          <h4>宣言するメリット</h4>
+          <ul class="merit-list">
+            <li>補助金申請時の加点</li>
+            <li>取り組みを広く周知できる</li>
+            <li>指定のロゴマークを広報等に使用できる</li>
+          </ul>
+          <p class="fine-print">※業種・規模を問わず宣言できます。</p>
+        </div>
+        <div class="bonus-card">
+          <h4>加点の対象となる要件</h4>
+          <ol class="steps-mini">
+            <li>ポータルサイトで宣言を作成（ひな形・記載見本あり）</li>
+            <li>2026年1月1日に更新されたひな形で宣言を公表</li>
+            <li>申請締切日時点で公表されていること</li>
+          </ol>
+          <div class="bonus-links">
+            <a href="https://www.biz-partnership.jp/index.html" target="_blank" rel="noopener">パートナーシップ構築宣言（ポータルサイト）↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 事業継続力強化計画 -->
+      <div class="section-head-row sub">
+        <div>
+          <span class="badge-must">必須</span>
+          <h3 class="sub-title">事業継続力強化計画とは</h3>
+        </div>
+        <a href="https://www.keizokuryoku.go.jp/" target="_blank" rel="noopener" class="mypage-pill">
+          マイページ（電子申請システム）
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <p class="lead">自然災害や感染症が発生した際でも事業を継続・早期復旧するために、中小企業が事前に備える計画です。経済産業大臣が認定を行い、新もの補助金をはじめ多くの補助金で加点対象となります。</p>
+      <div class="bonus-grid">
+        <div class="bonus-card">
+          <h4>認定を受けるメリット</h4>
+          <ul class="merit-list">
+            <li>税制優遇（設備投資の特別償却など）</li>
+            <li>金融支援（低利融資、保証枠の拡大など）</li>
+            <li>補助金申請時の加点</li>
+          </ul>
+          <p class="fine-print">※加点の対象は、申請締切日時点で有効な「（連携）事業継続力強化計画」を取得している事業者です。</p>
+        </div>
+        <div class="bonus-card">
+          <h4>認定までの流れ</h4>
+          <ol class="steps-mini">
+            <li>GビズIDプライムを取得（電子申請に必須）</li>
+            <li>電子申請システムから計画を作成・申請</li>
+            <li>審査のうえ、認定（標準処理期間は約45日）</li>
+          </ol>
+          <div class="bonus-links">
+            <a href="https://www.chusho.meti.go.jp/keiei/antei/bousai/keizokuryoku.html" target="_blank" rel="noopener">事業継続力強化計画（公式サイト）↗</a>
+            <a href="https://www.chusho.meti.go.jp/keiei/antei/bousai/keizokuryoku.html#contact" target="_blank" rel="noopener">申請に関するお問い合わせ先 ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 成長加速マッチングサービス -->
+      <div class="section-head-row sub">
+        <div>
+          <span class="badge-must">必須</span>
+          <h3 class="sub-title">成長加速マッチングサービスとは</h3>
+        </div>
+        <a href="https://mirasapo-connect.go.jp/corporation" target="_blank" rel="noopener" class="mypage-pill">
+          登録ページ
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <p class="lead">資金調達や販路開拓など、さらなる成長を目指すうえでの課題・ニーズを登録することで、金融機関・投資機関・認定支援機関などの支援者からコンタクトを受けられるマッチングプラットフォームです。</p>
+      <div class="bonus-grid">
+        <div class="bonus-card">
+          <h4>登録するメリット</h4>
+          <ul class="merit-list">
+            <li>補助金申請時の加点</li>
+            <li>金融機関・投資機関などの支援者からコンタクトを受けられる</li>
+            <li>資金調達や販路開拓の課題を、支援者に届けられる</li>
+          </ul>
+        </div>
+        <div class="bonus-card">
+          <h4>登録の流れ</h4>
+          <ol class="steps-mini">
+            <li>GビズIDプライムを取得</li>
+            <li>事業者として会員登録し、企業情報を登録</li>
+            <li>「挑戦課題」を登録し、掲載中の状態にする</li>
+          </ol>
+          <div class="bonus-links">
+            <a href="https://mirasapo-connect.go.jp/corporation" target="_blank" rel="noopener">成長加速マッチングサービス ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="sub-title" style="margin-top:88px;">その他にも加点項目があります</h3>
+      <p class="lead">以下は当社でのサポート対象外ですが、取得済みの場合は加点の対象になります。詳細は各制度の公式サイトをご確認ください。</p>
+      <div class="other-grid">
+        <div class="other-item"><b>くるみん</b><span>次世代法に基づく認定</span></div>
+        <div class="other-item"><b>えるぼし</b><span>女性活躍推進法に基づく認定</span></div>
+        <div class="other-item"><b>健康経営優良法人</b><span>健康経営優良法人2026の認定</span></div>
+        <div class="other-item"><b>再生事業者</b><span>中小企業活性化協議会等の支援を受けている事業者</span></div>
+        <div class="other-item"><b>経営革新計画</b><span>有効な承認を取得している事業者</span></div>
+        <div class="other-item"><b>DX認定</b><span>有効なDX認定を取得している事業者</span></div>
+        <div class="other-item"><b>J-Startup／地域版</b><span>選定された事業者</span></div>
+        <div class="other-item"><b>新規輸出1万者支援プログラム</b><span>グローバル枠のみ。ポータルで登録が完了した事業者</span></div>
+        <div class="other-item"><b>日本の食輸出1万者支援プログラム</b><span>グローバル枠のみ。ポータルで登録が完了した事業者</span></div>
+        <div class="other-item"><b>研究開発費・試験研究費の計上</b><span>定められた書類で計上している事業者</span></div>
+        <div class="other-item"><b>技術情報管理認証制度</b><span>認証を取得している事業者</span></div>
+        <div class="other-item"><b>アトツギ甲子園</b><span>ピッチ大会に出場した事業者</span></div>
+        <div class="other-item"><b>地域別最低賃金引上げ</b><span>要件を満たす事業者（書類は必要書類の任意項目を参照）</span></div>
+        <div class="other-item"><b>事業場内最低賃金引上げ</b><span>63円以上の賃上げをした事業者（書類は必要書類の任意項目を参照）</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="docs">
+    <span class="eyebrow">Documents Checklist</span>
+    <h2 class="title">必要書類チェックリスト</h2>
+    <p class="lead">該当する区分を選び、必要書類を確認しながらチェックを入れてご活用ください。チェックはこの端末に保存されます。</p>
+
+    <div class="docs-head">
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="corp">法人</button>
+        <button class="tab-btn" data-tab="individual">個人事業主</button>
+      </div>
+      <div class="progress-widget">
+        <div class="ring">
+          <svg viewBox="0 0 52 52">
+            <circle class="bg" cx="26" cy="26" r="22"></circle>
+            <circle class="fg" id="ring-fg" cx="26" cy="26" r="22" stroke-dasharray="138.2" stroke-dashoffset="138.2"></circle>
+          </svg>
+          <div class="ring-label" id="ring-label">0%</div>
+        </div>
+        <div class="progress-text" id="progress-text">0 / 0 件 完了</div>
+      </div>
+    </div>
+
+    <div class="doc-panel" id="doc-panel">
+      <p class="doc-note" id="doc-note"></p>
+      <ul class="doc-list" id="doc-list"></ul>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="brand"><span class="dot"></span>申請サポートガイド</div>
+      <a class="back-top scroll-top-link" href="#">TOP へ戻る ↑</a>
+    </div>
+    <p class="copy">Copyright © All Rights Reserved. 本サイトの内容・文章・画像等の無断転載・複製・二次配布を禁じます。</p>
+  </div>
+</footer>
+
+<div class="manual-backdrop" id="manualBackdrop"></div>
+<div class="manual-modal" id="manualModal" role="dialog" aria-modal="true" aria-labelledby="manualTitle">
+  <div class="manual-head">
+    <div>
+      <span class="m-eyebrow" id="manualEyebrow">書類マニュアル</span>
+      <h3 id="manualTitle">タイトル</h3>
+    </div>
+    <button class="manual-close" id="manualClose" aria-label="閉じる"></button>
+  </div>
+  <div class="manual-body" id="manualBody"></div>
+</div>
+
+<script>
+(function(){
+  /* ===================== 設定 ===================== */
+  var OFFICIAL_DOCS = "https://shinjigyou-monodukuri.smrj.go.jp/document/";
+
+  /* ===================== 小さなHTML部品 ===================== */
+  function sec(t){ return '<div class="manual-section-title">'+t+'</div>'; }
+  function lede(t){ return '<p class="manual-lede">'+t+'</p>'; }
+  function note(t){ return '<div class="manual-note">'+t+'</div>'; }
+  function warn(t){ return '<div class="manual-warn">'+t+'</div>'; }
+  function chk(a){ return '<ul class="manual-check">'+a.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul>'; }
+  function fields(a){ return '<ul class="manual-fields">'+a.map(function(x){return '<li><span class="mf-label">'+x[0]+'</span><span class="mf-desc">'+x[1]+'</span></li>';}).join('')+'</ul>'; }
+  function btn(href,label,sec2){ return '<a class="manual-btn'+(sec2?' secondary':'')+'" href="'+href+'" target="_blank" rel="noopener">'+label+'</a>'; }
+  function acts(inner){ return '<div class="manual-actions">'+inner+'</div>'; }
+  var CAP = '<p style="font-size:.86rem;color:var(--ink-faint);">取得が完了したら、マイページTOP画面のキャプチャを取得してください。（Windows：Print Screenキー／Mac：⌘+Shift+3）</p>';
+  var TEMPLATE_PENDING = warn('指定書式は準備中です。ご用意でき次第、こちらからダウンロードいただけるようになります。');
+
+  /* ===================== マニュアル本文 ===================== */
+  var manualData = {
+
+    gbiz_corp: {
+      eyebrow: "GビズIDプライム登録（法人）", title: "GビズIDプライム（法人）",
+      html: lede('GビズIDは、すべての事業者を対象とした共通認証システムです。一つのID・パスワードで、複数の行政サービスにログインでき、補助金申請、社会保険手続、各種認可申請など業務上の電子届出や申請に使用できます。')
+        + '<p>GビズIDには、GビズIDプライム、GビズIDメンバー、GビズIDエントリーという3種類のアカウントがありますが、申請に必要なアカウントはGビズIDプライムです。過去に取得していれば、新たに取得する必要はありません。</p>'
+        + sec('代表者がマイナンバーカードを持っている場合【推奨】')
+        + note('オンラインにて最短即日取得が可能です。事前にスマートフォンへ「GビズIDアプリ」のインストールが必須です。')
+        + sec('代表者がマイナンバーカードを持っていない場合')
+        + note('印鑑証明書と申請書の郵送手続きにて取得可能です。審査完了まで最大1か月かかりますため、お早めにご準備ください。')
+        + warn('取得が完了したら、マイページTOP画面のキャプチャを取得してください。（Windows：Print Screenキー／Mac：⌘+Shift+3）')
+        + acts(btn('https://gbiz-id.go.jp/top/','GビズIDプライムを取得する'))
+        + '<div class="manual-actions" style="flex-direction:row; gap:10px;">'
+        + '<button class="manual-btn secondary" style="flex:1;" data-open-steps="gbiz_corp" data-mode="online">オンライン申請マニュアル</button>'
+        + '<button class="manual-btn secondary" style="flex:1;" data-open-steps="gbiz_corp" data-mode="mail">郵送申請マニュアル</button>'
+        + '</div>'
+        + '<div class="manual-caps"><a href="https://gbiz-id.go.jp/top/manual/pdf/QuickManual_Prime_corporation.pdf" target="_blank" rel="noopener" style="color:var(--blue);">公式クイックマニュアル 法人代表者編（PDF）↗</a></div>',
+      stepsTitle: "GビズIDプライム 取得マニュアル（法人・オンライン申請）",
+      steps: [
+        {tag:"事前準備", title:"マイナンバーカードとスマホを用意する", desc:"有効期限内で署名用電子証明書が搭載されたマイナンバーカードが必要です。事前にスマホでApp Store／Google Playから「GビズIDアプリ」をインストールしてください。"},
+        {tag:"STEP 1", title:"公式サイトから申請をはじめる", desc:"gbiz-id.go.jp のトップページにある「GビズIDアカウントの作成をはじめる」ボタンを押します。"},
+        {tag:"STEP 2", title:"プライムアカウントを選び、事前チェックに答える", desc:"「プライムアカウントを申請する」→「法人代表者、府省・地方公共団体職員」を選択。マイナンバーカードの暗証番号を「持っている／覚えている」で回答すると、オンライン申請へ進めます。"},
+        {tag:"STEP 3", title:"オンライン申請を開始する", desc:"お手続きに必要なもの（マイナンバーカード、申請用端末とメールアドレス、GビズIDアプリをインストールしたスマートフォン）を確認し「オンライン申請を開始する」を押します。"},
+        {tag:"STEP 4", title:"メールアドレスを登録する", desc:"アカウントIDとなるメールアドレスを入力し、利用規約に同意して「入力内容を確認する」を押します。",
+          mock:'<div class="mock-frame"><div class="mock-bar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div><div class="mock-body">'
+            + '<div class="mock-field"><span class="mock-label">メールアドレス</span><div class="mock-input">例）info@example.co.jp<span class="mock-callout">1</span></div></div>'
+            + '<div class="mock-field"><div class="mock-input checkbox-row"><span class="mock-checkbox"></span>利用規約に同意する<span class="mock-callout">2</span></div></div>'
+            + '<div class="mock-field" style="margin-bottom:0;"><span class="mock-btn">入力内容を確認する</span></div></div></div>'
+            + '<div class="mock-legend"><div class="mock-legend-item"><span class="mock-legend-num">1</span>普段使っているメールアドレスを入力（そのままGビズIDのログインIDになります）</div>'
+            + '<div class="mock-legend-item"><span class="mock-legend-num">2</span>利用規約を確認し、チェックを入れる</div></div>'},
+        {tag:"STEP 5", title:"メールアドレスを確認して送信", desc:"入力したメールアドレスに誤りがないか確認し「この内容で送信する」を押すと、ワンタイムパスワードがメールで届きます。"},
+        {tag:"STEP 6", title:"ワンタイムパスワードを入力する", desc:"メールに記載されたワンタイムパスワードを30分以内に入力し「この内容で送信する」を押します。期限切れの場合ははじめからやり直しになります。"},
+        {tag:"STEP 7", title:"基本情報をまとめて入力する", desc:"法人番号を入力すると法人名・所在地が自動入力されます。続けて代表者氏名フリガナ、連絡先郵便番号・住所、SMS受信用電話番号、GビズIDログインパスワードまで、このページ内でまとめて入力します（マイナンバーカードの読み取りで代表者氏名・生年月日も取得されます）。",
+          mock:warn('旧字体・異体字（髙など）は登録できない場合があります。代替漢字（髙→高）に置き換えてください。')},
+        {tag:"STEP 8", title:"申請内容を確認して登録する", desc:"内容を確認し「この内容で登録する」を押すと、まずGビズIDエントリーアカウントが作成されます。入力したメールアドレス・パスワードでマイページにログインできるようになります。"},
+        {tag:"STEP 9", title:"アプリでQRコードを読み取り電子署名", desc:"画面に表示されたQRコードをスマホのGビズIDアプリで読み取り、マイナンバーカードを使って申請情報に電子署名します（QRコードの有効期限は10分）。"},
+        {tag:"STEP 10", title:"審査（最短即日）", desc:"PCの画面に戻り「この内容で登録する」を押すと審査が始まります。操作は不要でそのまま待ちます。審査完了後は「アプリ認証を設定する」を押します。"},
+        {tag:"STEP 11", title:"アプリ認証を設定する", desc:"再度QRコードをアプリで読み取り、アプリに表示されたワンタイムパスワードをPC画面に入力して「この内容で送信する」を押します。"},
+        {tag:"STEP 12", title:"SMSで本人確認して完了", desc:"SMS受信用電話番号に届くワンタイムパスワードを入力し「この内容で送信する」を押すと手続き完了。GビズIDプライムアカウントとしてマイページにログインできます。"},
+        {tag:"完了", title:"マイページをキャプチャ保存", desc:"マイページTOP画面のキャプチャを取得し、提出用に保存してください。"}
+      ],
+      stepsTitleMail: "GビズIDプライム 取得マニュアル（法人・郵送申請）",
+      stepsMail: [
+        {tag:"事前準備", title:"印鑑証明書を用意する", desc:"マイナンバーカードは不要ですが、発行日から3か月以内の印鑑証明書の原本（法務局発行、コピー不可）が必要です。スマホアプリのインストールは任意です。"},
+        {tag:"STEP 1", title:"申請の入口を選ぶ", desc:"gbiz-id.go.jp の「GビズIDアカウントの作成をはじめる」→「プライムアカウントを申請する」と進み、「法人代表者、府省・地方公共団体職員」を選んで「次へ」を押します。"},
+        {tag:"STEP 2", title:"書類申請へ進む", desc:"「事前チェックに進む」→マイナンバーカードの有無を聞かれたら「持っていない」を選択し「次へ」。「書類申請へ進む」リンクをクリックし、「書類申請を開始する」ボタンを押します。"},
+        {tag:"STEP 3", title:"メールアドレスを登録する", desc:"メールアドレスを入力し利用規約に同意して「入力内容を確認する」を押します。届いたワンタイムパスワードを入力して送信します。"},
+        {tag:"STEP 4", title:"基本情報を入力する", desc:"法人番号・法人名（自動入力可）・事業所所在地・代表者氏名・代表者氏名フリガナ・代表者生年月日を入力し「アカウント利用者情報入力へ進む」を押します。",
+          mock:warn('事業所所在地・代表者氏名・代表者生年月日が印鑑証明書の記載と異なっていると、書類不備とみなされ審査に通りません。印鑑証明書のとおり正確に入力してください。')},
+        {tag:"STEP 5", title:"利用者情報・パスワードを入力する", desc:"連絡先郵便番号・住所・利用者氏名などを入力し「アカウント情報入力へ進む」。続けてSMS受信用電話番号とGビズIDログインパスワードを入力し「入力内容を確認する」を押します。"},
+        {tag:"STEP 6", title:"送信してエントリーアカウントを作成", desc:"申請内容を確認し「この内容で送信する」を押すと、GビズIDエントリーアカウントが作成されます。続けて「アプリ認証を設定する」を押します（アプリがなければスキップ可）。"},
+        {tag:"STEP 7", title:"申請書をダウンロード・印刷する", desc:"「申請書をダウンロードする」ボタンから申請書（GビズIDプライム登録申請書〈法人〉）をダウンロードし、印刷します。"},
+        {tag:"STEP 8", title:"押印して郵送する", desc:"申請書の「作成日」欄に日付を手書きし、印鑑証明書の代表者印を実印欄に押印します。原本を〒530-8532 GビズID運用センター宛に郵送してください（申請書はコピーを保管）。",
+          mock:note('<b>郵送に必要な書類</b><br>①GビズIDプライム登録申請書（法人）　②印鑑証明書（発行日より3か月以内の原本、法務局発行、コピー不可）')},
+        {tag:"完了", title:"審査完了を待つ", desc:"審査には最大1か月ほどかかります。審査状況はGビズIDエントリーアカウントでマイページにログインして確認できます。審査完了後、SMS認証を行うとプライムアカウントが有効になります。"}
+      ]
+    },
+
+    gbiz_indiv: {
+      eyebrow: "GビズIDプライム登録（個人事業主）", title: "GビズIDプライム（個人事業主）",
+      html: lede('GビズIDは、すべての事業者を対象とした共通認証システムです。一つのID・パスワードで、複数の行政サービスにログインでき、補助金申請、社会保険手続、各種認可申請など業務上の電子届出や申請に使用できます。')
+        + '<p>GビズIDには、GビズIDプライム、GビズIDメンバー、GビズIDエントリーという3種類のアカウントがありますが、申請に必要なアカウントはGビズIDプライムです。過去に取得していれば、新たに取得する必要はありません。</p>'
+        + sec('マイナンバーカードを持っている場合【推奨】')
+        + note('オンラインにて最短即日取得が可能です。事前にスマートフォンへ「GビズIDアプリ」のインストールが必須です。')
+        + sec('マイナンバーカードを持っていない場合')
+        + note('印鑑登録証明書と申請書の郵送手続きにて取得可能です。審査完了まで原則1か月以内かかりますため、お早めにご準備ください。')
+        + warn('取得が完了したら、マイページTOP画面のキャプチャを取得してください。（Windows：Print Screenキー／Mac：⌘+Shift+3）')
+        + acts(btn('https://gbiz-id.go.jp/top/','GビズIDプライムを取得する'))
+        + '<div class="manual-actions" style="flex-direction:row; gap:10px;">'
+        + '<button class="manual-btn secondary" style="flex:1;" data-open-steps="gbiz_indiv" data-mode="online">オンライン申請マニュアル</button>'
+        + '<button class="manual-btn secondary" style="flex:1;" data-open-steps="gbiz_indiv" data-mode="mail">郵送申請マニュアル</button>'
+        + '</div>'
+        + '<div class="manual-caps"><a href="https://gbiz-id.go.jp/top/manual/pdf/QuickManual_Prime_sole-proprietor.pdf" target="_blank" rel="noopener" style="color:var(--blue);">公式クイックマニュアル 個人事業主編（PDF）↗</a></div>',
+      stepsTitle: "GビズIDプライム 取得マニュアル（個人事業主・オンライン申請）",
+      steps: [
+        {tag:"事前準備", title:"マイナンバーカードとスマホを用意する", desc:"有効期限内で署名用電子証明書が搭載されたマイナンバーカードが必要です。事前にスマホでApp Store／Google Playから「GビズIDアプリ」をインストールしてください。"},
+        {tag:"STEP 1", title:"申請の入口を選ぶ", desc:"gbiz-id.go.jp の「GビズIDアカウントの作成をはじめる」→「プライムアカウントを申請する」と進み、「個人事業主」を選んで「次へ」を押します。"},
+        {tag:"STEP 2", title:"マイナンバーカードの確認に答える", desc:"「事前チェックに進む」→暗証番号を覚えているか等の質問に「持っている／覚えている」を選び「次へ」を繰り返すと、「オンライン申請を開始する」ボタンが表示されます。"},
+        {tag:"STEP 3", title:"メールアドレスを登録する", desc:"アカウントIDとなるメールアドレスを入力し、利用規約に同意して「入力内容を確認する」を押します。その後「この内容で送信する」を押すとワンタイムパスワードがメールで届きます（30分以内に入力）。"},
+        {tag:"STEP 4", title:"基本情報・パスワードを入力する", desc:"屋号（なければ空欄可）、代表者氏名フリガナ、連絡先郵便番号・住所、SMS受信用電話番号、GビズIDログインパスワードを入力します。法人と違い、法人番号や登記情報は不要で項目が少なめです。",
+          mock:warn('旧字体・異体字（髙など）は登録できない場合があります。代替漢字（髙→高）に置き換えてください。')},
+        {tag:"STEP 5", title:"申請内容を確認して登録する", desc:"内容を確認し「この内容で登録する」を押すと、まずGビズIDエントリーアカウントが作成されます。入力したメールアドレス・パスワードでマイページにログインできるようになります。"},
+        {tag:"STEP 6", title:"アプリでQRコードを読み取り電子署名", desc:"画面に表示されたQRコードをスマホのGビズIDアプリで読み取り、マイナンバーカードを使って申請情報に電子署名します（QRコードの有効期限は10分）。"},
+        {tag:"STEP 7", title:"アカウント登録・アプリ認証", desc:"PCの画面に戻り「この内容で登録する」を押すと入力情報が登録されます。続けて「アプリ認証を設定する」を押します。"},
+        {tag:"STEP 8", title:"アプリ認証を設定する", desc:"再度QRコードをアプリで読み取り、アプリに表示されたワンタイムパスワードをPC画面に入力して「この内容で送信する」を押します。"},
+        {tag:"STEP 9", title:"SMSで本人確認して完了", desc:"SMS受信用電話番号に届くワンタイムパスワードを入力し「この内容で送信する」を押すと手続き完了。GビズIDプライムアカウントとしてマイページにログインできます。"},
+        {tag:"完了", title:"マイページをキャプチャ保存", desc:"マイページTOP画面のキャプチャを取得し、提出用に保存してください。"}
+      ],
+      stepsTitleMail: "GビズIDプライム 取得マニュアル（個人事業主・郵送申請）",
+      stepsMail: [
+        {tag:"事前準備", title:"印鑑登録証明書を用意する", desc:"マイナンバーカードは不要ですが、発行日から3か月以内の印鑑登録証明書の原本（市区町村発行、コピー不可）と登録印が必要です。"},
+        {tag:"STEP 1", title:"申請の入口を選ぶ", desc:"gbiz-id.go.jp の「GビズIDアカウントの作成をはじめる」→「プライムアカウントを申請する」と進み、「個人事業主」を選んで「次へ」を押します。"},
+        {tag:"STEP 2", title:"マイナンバーカードの有無を選択", desc:"マイナンバーカードを持っているか聞かれます。持っていない場合は「持っていない」を選んで「次へ」を押します。"},
+        {tag:"STEP 3", title:"書類申請を開始する", desc:"書類申請は審査完了まで最大1か月かかる旨の案内が表示されます。内容を確認し「書類申請を開始する」を押します。"},
+        {tag:"STEP 4", title:"メールアドレスを登録する", desc:"アカウントIDとなるメールアドレスを入力し、利用規約に同意して「入力内容を確認する」を押します。届いたワンタイムパスワードを入力して送信します。"},
+        {tag:"STEP 5", title:"事業者基本情報を入力する", desc:"事業形態で「個人事業主」を選択し、屋号（なければ空欄可）・事業所所在地・代表者氏名・フリガナ・生年月日を入力します。印鑑登録証明書の記載どおりに入力してください。",
+          mock:warn('所在地・代表者氏名・生年月日が印鑑登録証明書の記載と異なっていると、書類不備とみなされ審査に通りません。')},
+        {tag:"STEP 6", title:"利用者情報・アカウント情報を入力する", desc:"連絡先郵便番号・住所・利用者氏名・連絡先電話番号、SMS受信用電話番号、GビズIDログインパスワードを入力します。SMS受信用電話番号に誤りがあると、はじめからやり直しになるため特に注意してください。"},
+        {tag:"STEP 7", title:"入力内容を確認して送信", desc:"内容を確認のうえ「この内容で送信する」を押すと、登録申請受付完了の画面が表示されます。この時点ではまだ手続きは完了していません。"},
+        {tag:"STEP 8", title:"申請書をダウンロードして押印・郵送", desc:"申請書をダウンロード・印刷し、「作成日」欄に日付を手書き、印鑑登録証明書の実印を押印します。原本を郵送してください（申請書はコピーを保管）。",
+          mock:note('<b>郵送に必要な書類</b><br>①GビズIDプライム登録申請書（個人事業主）　②印鑑登録証明書（発行日より3か月以内の原本、市区町村発行、コピー不可）')},
+        {tag:"完了", title:"審査完了を待つ", desc:"審査には原則1か月以内かかります。審査状況はGビズIDエントリーアカウントでマイページにログインして確認できます。審査完了後、SMS認証を行うとプライムアカウントが有効になります。"}
+      ]
+    },
+
+    kessan_corp: {
+      eyebrow: "決算書類一式（直近3期分）", title: "決算書一式 - 必要項目 -",
+      html: sec('チェックリスト')
+        + chk(['決算報告書（一式）','法人税確定申告書（一式）','勘定科目内訳明細書（一式）','法人事業概況説明書（一式）','減価償却の内訳書（一式）※横向き'])
+        + note('<b>直近3期分</b>をご用意ください。設立から3期を迎えていない場合は、経過した決算分のみご提出ください。')
+        + note('法人税確定申告書（別表一）と法人事業概況説明書は、公式の提出書類「収益事業を行っていることを説明する書類」も兼ねます。')
+        + '<p>書類はすべてスキャンのうえPDFデータにてご提出ください。</p>'
+    },
+    kessan_ko: {
+      eyebrow: "決算書類一式（直近3期分）", title: "決算書類（個人事業主）",
+      html: sec('青色申告の場合')
+        + chk(['青色申告決算書一式（全ページ）','損益計算書・損益計算書の内訳・貸借対照表（4ページすべて）','簡易簿記の場合は、損益計算書（1ページ目）と貸借対照表（4ページ目）'])
+        + sec('白色申告の場合')
+        + chk(['白色申告収支内訳書一式（全ページ）'])
+        + note('直近3期分をご用意ください。開業から3期を迎えていない場合は、経過した決算分のみご提出ください。書類はすべてスキャンのうえPDFデータにてご提出ください。')
+    },
+    rireki: {
+      eyebrow: "履歴事項全部証明書", title: "履歴事項全部証明書",
+      html: lede('<b>法務局の窓口での取得</b>をおすすめします。窓口なら即日その場で受け取れます。オンライン（登記ねっと）でも取得できますが、窓口受取または郵送での受け取りとなるため、届くまで数日かかります。')
+        + sec('チェックリスト')
+        + chk(['履歴事項全部証明書であること（現在事項証明書は不可）','発行日が、新もの補助金申請日より3か月以内であること','全ページそろっていること'])
+        + '<p>書類はすべてスキャンのうえPDFデータにてご提出ください。</p>'
+        + sec('取得方法の比較')
+        + chk(['<b>法務局窓口：</b>1通600円。<b>即日</b>その場で受け取り可能。もっとも確実な方法です。','<b>登記ねっと（窓口受取）：</b>1通490円。請求の翌業務日以降に、指定した登記所の窓口で受け取り。','<b>登記ねっと（郵送受取）：</b>1通520円。自宅・会社にいながら取得できますが、到着まで数日かかります。'])
+        + acts(btn('https://www.moj.go.jp/MINJI/minji10.html','法務局一覧サイト（公式・窓口を探す）') + '<button class="manual-btn secondary" data-open-steps="rireki" data-mode="online">登記ねっとでの取得手順</button>')
+        + '<div class="manual-caps"><a href="https://www.touki-kyoutaku-online.moj.go.jp/first.html" target="_blank" rel="noopener" style="color:var(--blue);">登記ねっと公式サイト ↗</a></div>',
+      stepsTitle: "履歴事項全部証明書 取得マニュアル（登記ねっと・オンライン請求）",
+      steps: [
+        {tag:"事前準備", title:"利用者情報を登録する", desc:"「登記・供託オンライン申請システム」にアクセスし、申請者情報登録（氏名・住所・電話番号・メールアドレス等）を行います。初回のみ必要で、ログイン用IDが発行されます。"},
+        {tag:"STEP 1", title:"かんたん登記・供託申請を開く", desc:"登記ねっとにログインし、「かんたん登記・供託申請」を選択します。専用ソフトのインストールは不要で、Webブラウザだけで手続きできます。"},
+        {tag:"STEP 2", title:"会社を検索する", desc:"取得したい会社の正確な商号（社名）と本店所在地を入力して、対象の法人を検索します。登記上の正式な会社名・本店所在地を入力してください。"},
+        {tag:"STEP 3", title:"証明書の種類・通数・交付方法を指定する", desc:"証明書の種類で「履歴事項証明書」を選択し、必要な通数を指定します。交付方法は「窓口受取」（490円）か「郵送」（520円）から選びます。"},
+        {tag:"STEP 4", title:"手数料を電子納付する", desc:"インターネットバンキングやPay-easy対応ATMで手数料を電子納付します。平日8:30〜23時・休日8:30〜18時に請求可能です（17:15以降の請求は翌業務日受付）。"},
+        {tag:"完了", title:"受け取ってスキャンする", desc:"窓口受取の場合は指定した登記所へ、郵送の場合は自宅・会社に届いたら、全ページをスキャンしてPDFデータで保存します。発行日が申請日から3か月以内であることを確認してください。"}
+      ]
+    },
+    nozei_corp: {
+      eyebrow: "納税証明書その2（直近分）", title: "納税証明書（その2）",
+      html: lede('<b>必ず税務署で取得してください。</b>都道府県税事務所や市区町村役場で発行される証明書（法人事業税・法人住民税の納税証明書など）は対象外です。国税である法人税の証明書「その２」が必要です。')
+        + sec('チェックリスト')
+        + chk(['税目が「法人税」であること','納税証明書「その２（所得金額用）」であること','直近分の納税証明書であること','<b>発行元が税務署</b>であること（都道府県・市区町村ではない）'])
+        + note('直近分のみご提出ください。e-Taxで申告している場合は、メッセージボックスの「受信通知」「電子申請等証明書」など、申告日時・受付番号がわかる書類もあわせてご用意ください。')
+        + '<p>書類はすべてスキャンのうえPDFデータにてご提出ください。</p>'
+        + acts(btn('https://www.nta.go.jp/about/organization/access/map.htm','管轄の税務署を調べる（国税庁）'))
+    },
+    nozei_ko: {
+      eyebrow: "納税証明書その2（直近分）", title: "納税証明書（その2）",
+      html: lede('<b>必ず税務署で取得してください。</b>都道府県税事務所や市区町村役場で発行される証明書（住民税・事業税の納税証明書など）は対象外です。国税である所得税の証明書「その２」が必要です。')
+        + sec('チェックリスト')
+        + chk(['直近の納税証明書であること','税目が「所得税」であること','事業所得金額の記載があるもの（その２ 所得金額用）','<b>発行元が税務署</b>であること（都道府県・市区町村ではない）'])
+        + '<p>書類はすべてスキャンのうえPDFデータにてご提出ください。直近1期分のみご提出ください。e-Taxで申告している場合は、メッセージボックスの「受信通知」など申告日時・受付番号がわかる書類もあわせてご用意ください。</p>'
+        + acts(btn('https://www.nta.go.jp/about/organization/access/map.htm','管轄の税務署を調べる（国税庁）'))
+    },
+    kakutei: {
+      eyebrow: "確定申告書第一表の控え（直近分）", title: "確定申告書の控え（第一表）",
+      html: sec('チェックリスト')
+        + chk(['直近の確定申告書であること','所得税の確定申告書であること','税務署での受領が確認できること（電子申告の印字または受領印）','受領が確認できない場合、受信通知があること'])
+        + '<p>書類はすべてスキャンのうえPDFデータにてご提出ください。</p>'
+    },
+    kaigyo: {
+      eyebrow: "開業届の控え", title: "開業届の控え",
+      html: sec('提出が必要な場合')
+        + chk(['開業後、一度も決算期（確定申告）を迎えていない場合'])
+        + sec('提出するもの')
+        + chk(['開業届の控え（スキャンしてPDF）'])
+    },
+    kyuyo: {
+      eyebrow: "賃金台帳（直近決算期間分）", title: "賃金台帳",
+      html: lede('直近決算期間分の賃金台帳をご用意ください。全従業員（直近決算時点で雇用している対象者全員）の、決算期間中の賃金台帳が必要です。')
+        + sec('どの月の賃金台帳を出せばいいか迷ったら')
+        + '<p>給与は「対象月（働いた月）」ではなく、<b>「支給日（実際に振り込んだ日）」が決算期間に入っているかどうか</b>で判断してください。</p>'
+        + note('<b>例：決算期間が2025年4月1日〜2026年3月31日、給与が「末締め・翌月25日払い」の場合</b><br><br>・2025年<b>3月分</b>（支給日：2025年4月25日）→ ○ 含む（最初の月）<br>・2025年4月分〜2026年1月分（各翌月25日払い）→ ○ 含む<br>・2026年<b>2月分</b>（支給日：2026年3月25日）→ ○ 含む（最後の月）<br>・2026年<b>3月分</b>（支給日：2026年4月25日）→ ✕ 含まない（次の決算期）<br><br>→ この例では「2025年3月分〜2026年2月分」の<b>12か月分</b>の賃金台帳をご用意いただく形になります。')
+        + '<p style="font-size:.82rem;color:var(--ink-faint);">※締め日・支払日は会社によって異なります。自社の給与規程に合わせて、支給日が決算期間に入る月を数えてください。</p>'
+    },
+    kyuyo_recent: {
+      eyebrow: "賃金台帳（直近支給分）", title: "賃金台帳（直近支給分）",
+      html: lede('直近1か月分（もっとも新しく支給した給与）の賃金台帳をご用意ください。決算期間分とは別に、直近の賃金水準を確認するための書類です。')
+        + sec('どこがポイントか')
+        + fields([['対象範囲','全従業員分（決算期間分の賃金台帳と同じ対象者）'],['対象月','申請時点でもっとも新しく支給日を迎えた1か月分のみでOK']])
+        + note('こちらは「直近決算期間分の賃金台帳」とは別に必要な書類です。両方あわせてご準備ください。')
+    },
+
+    b_partner: {
+      eyebrow: "パートナーシップ構築宣言（加点）", title: "パートナーシップ構築宣言",
+      html: lede('サプライチェーン全体の共存共栄や、取引先との望ましい取引慣行の遵守を、企業の代表者名で宣言する制度です。宣言は「パートナーシップ構築宣言」ポータルサイトで公表されます。')
+        + sec('提出するもの')
+        + chk(['ポータルサイトで宣言が公表されているページの画面キャプチャ（またはPDF）'])
+        + sec('加点の要件')
+        + chk(['2026年1月1日に更新されたひな形で宣言を公表していること','申請締切日（2026年10月30日）時点で公表されていること'])
+        + note('宣言は企業の代表者名で行います。ポータルサイトにひな形と記載見本があります。業種・規模を問わず宣言できます。')
+        + acts(btn('https://www.biz-partnership.jp/index.html','パートナーシップ構築宣言（ポータルサイト）を開く'))
+    },
+    b_keizoku: {
+      eyebrow: "事業継続力強化計画（加点）", title: "事業継続力強化計画",
+      html: lede('自然災害や感染症が発生した際でも事業を継続・早期復旧するために、中小企業が事前に備える計画です。経済産業大臣が認定を行い、多くの補助金で加点対象となります。')
+        + sec('提出するもの')
+        + chk(['認定書の写し（PDF）'])
+        + sec('加点の要件')
+        + chk(['申請締切日（2026年10月30日）時点で有効な「（連携）事業継続力強化計画」の認定を取得していること'])
+        + sec('認定までの流れ')
+        + chk(['GビズIDプライムを取得（電子申請に必須）','電子申請システムから計画を作成・申請','審査のうえ、認定（標準処理期間は約45日）'])
+        + warn('認定までに約45日かかります。申請締切に間に合うよう、お早めにご準備ください。')
+        + acts(btn('https://www.keizokuryoku.go.jp/','マイページ（電子申請システム）') + btn('https://www.chusho.meti.go.jp/keiei/antei/bousai/keizokuryoku.html','事業継続力強化計画（公式サイト）',true))
+    },
+    b_seicho: {
+      eyebrow: "成長加速マッチングサービス登録（加点）", title: "成長加速マッチングサービス",
+      html: lede('中小企業庁が運営する、事業拡大や新規事業立ち上げなどの成長志向を持つ事業者が、金融機関・投資機関・認定支援機関などの支援者とつながることができる公的マッチングプラットフォームです。')
+        + warn('利用にはGビズIDプライムまたはGビズIDメンバーが必要です（GビズIDエントリーは対象外）。作業時間の目安は約15分です。応募締切日時点で挑戦課題を1件以上「掲載中」にしておく必要があります。')
+        + CAP
+        + acts(btn('https://mirasapo-connect.go.jp/corporation','成長加速マッチングに登録する') + '<button class="manual-btn secondary" data-open-steps="b_seicho">登録マニュアルを見る</button>'),
+      stepsTitle: "成長加速マッチング 登録マニュアル",
+      steps: [
+        {tag:"STEP 1", title:"新規会員登録・ログイン", desc:"mirasapo-connect.go.jp のトップ画面にある「新規登録・ログイン」ボタンを押し、GビズIDとパスワードでログインします。ログイン後の会員登録画面では、GビズIDに登録済みの情報が自動で引き継がれる項目があります。"},
+        {tag:"STEP 2", title:"挑戦課題を登録する", desc:"企業プロフィールの入力後、挑戦課題の登録に進みます。まず「挑戦カテゴリー」（資金調達／事業承継／経営相談 など）を選び、カテゴリーに応じた入力項目に答えていきます。",
+          mock:'<div class="mock-legend"><div class="mock-legend-item"><span class="mock-legend-num">1</span>挑戦課題のタイトルは、支援機関が最初に目にする部分。課題を具体的にひと言で表す</div>'
+            + '<div class="mock-legend-item"><span class="mock-legend-num">2</span>現状・数字・希望する支援内容を具体的に書くほど、相性の良い支援機関とマッチしやすい</div></div>'},
+        {tag:"STEP 3", title:"追加情報を登録する（任意）", desc:"挑戦課題の登録後、事業内容や強みなどの追加情報を登録します。ここは任意項目ですが、充実させておくほど支援機関とのマッチング率が上がるとされています。"},
+        {tag:"STEP 4", title:"掲載ステータスを確認する", desc:"マイページで、登録した挑戦課題のステータスを確認します。",
+          mock:warn('加点対象になるのは「掲載中」のみです。「掲載終了」になっていると加点要件を満たさないので注意してください。')},
+        {tag:"完了", title:"マイページをキャプチャ", desc:"応募締切日時点で挑戦課題が「掲載中」になっていることを確認し、マイページTOP画面のキャプチャを取得して提出用に保存してください。"}
+      ]
+    },
+
+    kinyu: {
+      eyebrow: "金融機関による確認書", title: "金融機関から資金提供を受ける場合",
+      html: sec('提出が必要な場合')
+        + chk(['補助事業の実施にあたり、金融機関から資金提供を受ける場合'])
+        + sec('提出するもの')
+        + chk(['金融機関による確認書（公式の指定様式）'])
+        + note('金融機関に事業計画の内容を確認してもらう必要があります。お早めにご相談ください。')
+        + acts(btn(OFFICIAL_DOCS,'公式サイト（資料ダウンロード）↗'))
+    },
+    lease: {
+      eyebrow: "リース会社との共同申請", title: "リース会社と共同申請する場合",
+      html: sec('提出するもの')
+        + chk(['リース料軽減計算書（リース事業協会の確認が必要）','リース取引に係る誓約書（公式の指定様式）'])
+        + acts(btn(OFFICIAL_DOCS,'公式サイト（資料ダウンロード）↗'))
+    },
+    saisei: {
+      eyebrow: "再生事業者加点", title: "再生事業者加点を希望する場合",
+      html: sec('提出するもの')
+        + chk(['事業再生支援を受けた支援機関等による確認書等'])
+        + note('支援を受けている計画の種類に応じた様式があります。公式サイトでご確認ください。')
+        + acts(btn(OFFICIAL_DOCS,'公式サイト（資料ダウンロード）↗'))
+    },
+    chiiki: {
+      eyebrow: "地域別最低賃金引上げ", title: "地域別最低賃金引上げ特例／加点を希望する場合",
+      html: sec('提出するもの')
+        + chk(['地域別最低賃金引上げに係る要件確認書（Excel・公式の指定様式）','賃金台帳（事業場内の全従業員分。要件確認書に記載する該当月がすべて含まれること）'])
+        + acts(btn(OFFICIAL_DOCS,'公式サイト（資料ダウンロード）↗'))
+    },
+    jigyoba: {
+      eyebrow: "事業場内最低賃金引上げ", title: "事業場内最低賃金引上げに係る加点を希望する場合",
+      html: sec('提出するもの')
+        + chk(['事業場内最低賃金引上げに係る要件確認書（Excel・公式の指定様式）','賃金台帳（2025年7月分と、応募申請直近月分の事業場内の全従業員分）'])
+        + sec('要件')
+        + chk(['2025年7月と応募申請直近月の事業場内最低賃金を比べ、全国目安で示された額（63円以上）の賃上げをしていること'])
+        + acts(btn(OFFICIAL_DOCS,'公式サイト（資料ダウンロード）↗'))
+    },
+    keiei: {
+      eyebrow: "経営革新計画加点", title: "経営革新計画加点を希望する場合",
+      html: sec('提出するもの')
+        + chk(['経営革新計画承認書の写し','承認書に計画期間が記載されていない場合は、計画期間が記載されている経営革新計画書の写し'])
+    },
+    kenkyu: {
+      eyebrow: "研究開発費・試験研究費計上", title: "研究開発費・試験研究費計上に係る加点を希望する場合",
+      html: sec('提出するもの（いずれか）')
+        + chk(['過去4年以内に税務申告に使用した「別表六（十）」の写し','試験研究費計上の確認のためのフォーマット（公式サイトで後日公開予定）','過去4年以内の研究開発費が計上された、会計上の「販売費及び一般管理費明細書」の写し'])
+    }
+  };
+
+  /* ===================== 書類リスト ===================== */
+  /* t: c=法人 / i=個人事業主 / b=両方,  opt: 任意 */
+  var DOCS = [
+    {id:"form_pre", t:"b", title:"事前確認フォーム", fmt:"提出様式：フォーム入力後送信", btn:"フォームを入力する", link:"DIRECT", href:"https://docs.google.com/forms/d/e/1FAIpQLSeIqdkWwjhOctS3mSkv44NFQiB76XmK7l8ZIvn68Zq-5Qy2rw/viewform?usp=publish-editor"},
+    {id:"form_biz", t:"c", title:"補助事業者フォーム", fmt:"提出様式：フォーム入力後送信", btn:"フォームを入力する", link:"DIRECT", href:"https://share-na2.hsforms.com/2_Z1YG3H6SWKcwJq5sUEpBws57i7"},
+    {id:"form_biz", t:"i", title:"補助事業者フォーム", fmt:"提出様式：フォーム入力後送信", btn:"フォームを入力する", link:"DIRECT", href:"https://share-na2.hsforms.com/2UINCaDlJRpawxlf5WuCxeQs57i7"},
+    {id:"gbiz", t:"c", title:"GビズIDプライム登録", fmt:"提出様式：GビズIDの登録情報の画面キャプチャを提出", m:"gbiz_corp", btn:"詳しくはこちら"},
+    {id:"gbiz", t:"i", title:"GビズIDプライム登録", fmt:"提出様式：GビズIDの登録情報の画面キャプチャを提出", m:"gbiz_indiv", btn:"詳しくはこちら"},
+    {id:"kakutei", t:"i", title:"確定申告書第一表の控え（直近分）", fmt:"提出様式：スキャンした書類をPDFファイルで提出", m:"kakutei", btn:"詳しくはこちら"},
+    {id:"kessan", t:"c", title:"決算書類一式（直近3期分）", fmt:"提出様式：PDFファイルで提出", cav:"「必要項目」を必ず確認のうえご提出ください。", m:"kessan_corp", btn:"必要項目はこちら"},
+    {id:"kessan", t:"i", title:"決算書類一式（直近3期分）", fmt:"青色申告の場合：青色申告決算書一式／白色申告の場合：白色申告収支内訳書一式（スキャンしてPDFで提出）", m:"kessan_ko", btn:"詳しくはこちら"},
+    {id:"rireki", t:"c", title:"履歴事項全部証明書", fmt:"提出様式：スキャンした書類をPDFファイルで提出", cav:"新もの補助金申請日から遡って3か月以内に取得した書類のみ有効です。", m:"rireki", btn:"詳しくはこちら"},
+    {id:"nozei", t:"c", title:"納税証明書その2（直近分）", fmt:"提出様式：スキャンした書類をPDFファイルで提出", m:"nozei_corp", btn:"詳しくはこちら"},
+    {id:"nozei", t:"i", title:"納税証明書その2（直近分）", fmt:"提出様式：スキャンした書類をPDFファイルで提出", m:"nozei_ko", btn:"詳しくはこちら"},
+    {id:"roudou", t:"b", title:"労働者名簿（指定様式）", fmt:"提出様式：ダウンロードしたExcelファイルに記入して提出", btn:"様式をダウンロード", link:"DIRECT", href:"https://shinjigyou-monodukuri.smrj.go.jp/assets/documents/shinmono_employee_list.xlsx"},
+    {id:"kyuyo1", t:"b", title:"賃金台帳（直近決算期間分）", fmt:"提出様式：直近決算期間分の賃金台帳（PDFなど）を全月分ご用意ください", m:"kyuyo", btn:"詳しくはこちら"},
+    {id:"kyuyo2", t:"b", title:"賃金台帳（直近支給分）", fmt:"提出様式：直近1か月分の賃金台帳（PDFなど）", m:"kyuyo_recent", btn:"詳しくはこちら"},
+    {id:"b_seicho", t:"b", title:"成長加速マッチングサービス登録", fmt:"提出様式：登録済画面のキャプチャを提出", m:"b_seicho", btn:"登録する"},
+    {id:"kaigyo", t:"i", opt:1, title:"開業後、一度も決算期を迎えていない場合（革新的新製品・サービス枠／グローバル枠）", fmt:"開業届の控えをスキャンしてPDFで提出"},
+    {id:"kinyu", t:"b", opt:1, title:"金融機関から資金提供を受ける場合", fmt:"金融機関による確認書（指定様式）を提出"},
+    {id:"lease", t:"b", opt:1, title:"リース会社と共同申請する場合", fmt:"リース料軽減計算書・リース取引に係る誓約書を提出"},
+    {id:"saisei", t:"b", opt:1, title:"再生事業者加点を希望する場合", fmt:"事業再生支援を受けた支援機関等による確認書等を提出"},
+    {id:"chiiki", t:"b", opt:1, title:"地域別最低賃金引上げ特例／加点を希望する場合", fmt:"要件確認書（Excel）＋賃金台帳を提出"},
+    {id:"jigyoba", t:"b", opt:1, title:"事業場内最低賃金引上げに係る加点を希望する場合", fmt:"要件確認書（Excel）＋賃金台帳（2つの期間）を提出"},
+    {id:"keiei", t:"b", opt:1, title:"経営革新計画加点を希望する場合", fmt:"経営革新計画承認書の写しを提出"},
+    {id:"kenkyu", t:"b", opt:1, title:"研究開発費・試験研究費計上に係る加点を希望する場合", fmt:"定められた書類を提出"}
+  ];
+
+  /* ===================== DOM helpers ===================== */
+  function el(tag, cls, txt){ var e=document.createElement(tag); if(cls) e.className=cls; if(txt!=null) e.textContent=txt; return e; }
+
+  /* Scroll to top */
+  document.querySelectorAll('.scroll-top-link').forEach(function(l){
+    l.addEventListener('click', function(e){ e.preventDefault(); window.scrollTo({top:0, behavior:'smooth'}); });
+  });
+
+  /* Mypage dropdown */
+  var mypageToggle = document.getElementById('mypageToggle');
+  var mypageMenu = document.getElementById('mypageMenu');
+  mypageToggle.addEventListener('click', function(e){
+    e.stopPropagation();
+    mypageToggle.classList.toggle('open');
+    mypageMenu.classList.toggle('open');
+  });
+  document.addEventListener('click', function(e){
+    if(!mypageMenu.contains(e.target) && e.target !== mypageToggle){
+      mypageToggle.classList.remove('open');
+      mypageMenu.classList.remove('open');
+    }
+  });
+
+  /* Sidebar */
+  var sidebar = document.getElementById('sidebar');
+  var backdrop = document.getElementById('backdrop');
+  function openSidebar(){ sidebar.classList.add('open'); backdrop.classList.add('open'); }
+  function closeSidebar(){ sidebar.classList.remove('open'); backdrop.classList.remove('open'); }
+  document.getElementById('burgerBtn').addEventListener('click', openSidebar);
+  document.getElementById('sidebarClose').addEventListener('click', closeSidebar);
+  backdrop.addEventListener('click', closeSidebar);
+  document.querySelectorAll('.side-link').forEach(function(l){ l.addEventListener('click', closeSidebar); });
+
+  /* ===================== Manual overlay ===================== */
+  var manualBackdrop = document.getElementById('manualBackdrop');
+  var manualModal = document.getElementById('manualModal');
+  var manualTitle = document.getElementById('manualTitle');
+  var manualEyebrow = document.getElementById('manualEyebrow');
+  var manualBody = document.getElementById('manualBody');
+  var lastFocus = null;
+
+  function bindStepButtons(){
+    manualBody.querySelectorAll('[data-open-steps]').forEach(function(b){
+      b.addEventListener('click', function(){ renderSteps(b.getAttribute('data-open-steps'), b.getAttribute('data-mode')); });
+    });
+  }
+  function renderOverview(key){
+    var d = manualData[key]; if(!d) return;
+    manualEyebrow.textContent = d.eyebrow;
+    manualTitle.textContent = d.title;
+    manualBody.innerHTML = d.html;
+    manualBody.scrollTop = 0;
+    bindStepButtons();
+  }
+  function renderSteps(key, mode){
+    var d = manualData[key]; if(!d) return;
+    var isMail = mode === 'mail';
+    var steps = isMail ? d.stepsMail : d.steps;
+    if(!steps) return;
+    manualEyebrow.textContent = "STEP BY STEP";
+    manualTitle.textContent = (isMail ? d.stepsTitleMail : d.stepsTitle) || d.title;
+    var backSvg = '<svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M13 5H1M1 5L5 1M1 5L5 9" stroke="currentColor" stroke-width="1.4"/></svg>';
+    var html = '<button class="manual-back" data-back-to="'+key+'">'+backSvg+' 概要に戻る</button><ul class="step-flow">';
+    steps.forEach(function(s, i){
+      html += '<li class="step-flow-item"><div class="step-flow-num">'+(i+1)+'</div><span class="step-flow-tag">'+s.tag+'</span><h4>'+s.title+'</h4><p>'+s.desc+'</p>'+(s.mock||'')+'</li>';
+    });
+    html += '</ul>';
+    manualBody.innerHTML = html;
+    manualBody.scrollTop = 0;
+    manualBody.querySelector('[data-back-to]').addEventListener('click', function(){ renderOverview(key); });
+  }
+  function openManual(key){
+    if(!manualData[key]) return;
+    lastFocus = document.activeElement;
+    renderOverview(key);
+    manualBackdrop.classList.add('open');
+    manualModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    document.getElementById('manualClose').focus();
+  }
+  function closeManual(){
+    manualBackdrop.classList.remove('open');
+    manualModal.classList.remove('open');
+    document.body.style.overflow = '';
+    if(lastFocus) lastFocus.focus();
+  }
+  manualBackdrop.addEventListener('click', closeManual);
+  document.getElementById('manualClose').addEventListener('click', closeManual);
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeManual(); });
+
+  /* ===================== Checklist ===================== */
+  var tab = "corp";
+  var STORAGE_KEY = 'shinmono-checklist-v3';
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; } catch(e){ state = {}; }
+  function save(){ try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e){} }
+  function sKey(id){ return tab + ':' + id; }
+
+  function itemsFor(t){
+    var k = (t === 'corp') ? 'c' : 'i';
+    return DOCS.filter(function(d){ return d.t === 'b' || d.t === k; });
+  }
+
+  // hero counts (必須項目数)
+  document.querySelectorAll('[data-count]').forEach(function(s){
+    var n = itemsFor(s.getAttribute('data-count')).filter(function(d){ return !d.opt; }).length;
+    s.textContent = n;
+  });
+
+  function render(){
+    var list = document.getElementById('doc-list');
+    list.innerHTML = '';
+    document.getElementById('doc-note').textContent = (tab === 'corp' ? '法人' : '個人事業主') + 'の方の必要書類です。各項目の注意事項を確認のうえご用意ください。';
+    var dividerShown = false;
+    itemsFor(tab).forEach(function(d){
+      if(d.opt && !dividerShown){
+        var div = el('li', 'cond-divider');
+        div.innerHTML = '<span>ここからは該当する場合のみ必要な書類です</span><p>ご自身で当てはまるかの判断が難しい場合は、まずはご連絡ください。</p>';
+        list.appendChild(div);
+        dividerShown = true;
+      }
+      var li = el('li', 'doc-item' + (d.opt ? ' optional' : ''));
+      li.setAttribute('data-id', d.id);
+      var check = el('div', 'check');
+      check.setAttribute('role', 'checkbox');
+      check.setAttribute('tabindex', '0');
+      check.setAttribute('aria-label', d.title + 'を完了にする');
+      check.addEventListener('click', function(){ toggle(d.id); });
+      check.addEventListener('keydown', function(e){ if(e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); toggle(d.id); } });
+
+      var body = el('div', 'doc-body');
+      var h = el('h5'); h.appendChild(document.createTextNode(d.title));
+      body.appendChild(h);
+      body.appendChild(el('p', 'fmt', d.fmt));
+      if(d.cav) body.appendChild(el('p', 'caveat', d.cav));
+
+      var action = el('div', 'doc-action');
+      if(d.opt){
+        action.appendChild(el('span', 'cond-contact', 'まずはご連絡ください'));
+      } else if(d.link === "DIRECT"){
+        var da = el('a', null, d.btn); da.href = d.href; da.target = '_blank'; da.rel = 'noopener'; action.appendChild(da);
+      } else {
+        var b = el('button', null, d.btn); b.type = 'button';
+        b.addEventListener('click', function(){ openManual(d.m); });
+        action.appendChild(b);
+      }
+      li.appendChild(check); li.appendChild(body); li.appendChild(action);
+      list.appendChild(li);
+    });
+    refresh();
+  }
+
+  function toggle(id){
+    state[sKey(id)] = !state[sKey(id)];
+    save();
+    refresh();
+  }
+
+  function refresh(){
+    var items = itemsFor(tab), total = 0, done = 0;
+    document.querySelectorAll('#doc-list .doc-item').forEach(function(li){
+      var id = li.getAttribute('data-id');
+      var isOpt = li.classList.contains('optional');
+      var checked = !!state[sKey(id)];
+      li.classList.toggle('done', checked);
+      var c = li.querySelector('.check');
+      c.classList.toggle('checked', checked);
+      c.setAttribute('aria-checked', checked ? 'true' : 'false');
+      if(!isOpt){ total++; if(checked) done++; }
+    });
+    var pct = total ? Math.round(done/total*100) : 0;
+    var circ = 138.2;
+    document.getElementById('ring-fg').style.strokeDashoffset = circ - (pct/100)*circ;
+    document.getElementById('ring-label').textContent = pct + '%';
+    document.getElementById('progress-text').innerHTML = '必須 <b>' + done + '</b> / ' + total + ' 件 完了';
+  }
+
+  var tabBtns = document.querySelectorAll('.tab-btn');
+  function setTab(key){
+    tab = key;
+    tabBtns.forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-tab') === key); });
+    render();
+  }
+  tabBtns.forEach(function(b){ b.addEventListener('click', function(){ setTab(b.getAttribute('data-tab')); }); });
+  document.querySelectorAll('[data-tab-target]').forEach(function(a){
+    a.addEventListener('click', function(){ setTab(a.getAttribute('data-tab-target')); });
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
