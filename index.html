@@ -1326,6 +1326,7 @@
     {id:"kyuyo1", t:"b", title:"賃金台帳（直近決算期間分）", fmt:"提出様式：直近決算期間分の賃金台帳（PDFなど）を全月分ご用意ください", m:"kyuyo", btn:"詳しくはこちら"},
     {id:"kyuyo2", t:"b", title:"賃金台帳（直近支給分）", fmt:"提出様式：直近1か月分の賃金台帳（PDFなど）", m:"kyuyo_recent", btn:"詳しくはこちら"},
     {id:"b_seicho", t:"b", title:"成長加速マッチングサービス登録", fmt:"提出様式：登録済画面のキャプチャを提出", m:"b_seicho", btn:"登録する"},
+    {id:"hearing", t:"b", title:"ヒアリングフォーム", fmt:"「回答する」ボタンからご入力をお願いします。", btn:"回答する", link:"HEARING", href:"https://mygrants.github.io/shinmono-hearing/"},
     {id:"kaigyo", t:"i", opt:1, title:"開業後、一度も決算期を迎えていない場合（革新的新製品・サービス枠／グローバル枠）", fmt:"開業届の控えをスキャンしてPDFで提出"},
     {id:"kinyu", t:"b", opt:1, title:"金融機関から資金提供を受ける場合", fmt:"金融機関による確認書（指定様式）を提出"},
     {id:"lease", t:"b", opt:1, title:"リース会社と共同申請する場合", fmt:"リース料軽減計算書・リース取引に係る誓約書を提出"},
@@ -1475,6 +1476,15 @@
       var action = el('div', 'doc-action');
       if(d.opt){
         action.appendChild(el('span', 'cond-contact', 'まずはご連絡ください'));
+      } else if(d.link === "HEARING"){
+        if(d.href){
+          var ha = el('a', null, d.btn); ha.href = d.href; ha.target = '_blank'; ha.rel = 'noopener'; action.appendChild(ha);
+        } else {
+          var hb = el('button', null, 'フォーム準備中'); hb.type = 'button'; hb.setAttribute('aria-disabled','true');
+          hb.style.opacity = '.45'; hb.style.cursor = 'not-allowed';
+          hb.addEventListener('click', function(e){ e.preventDefault(); });
+          action.appendChild(hb);
+        }
       } else if(d.link === "DIRECT"){
         var da = el('a', null, d.btn); da.href = d.href; da.target = '_blank'; da.rel = 'noopener'; action.appendChild(da);
       } else {
