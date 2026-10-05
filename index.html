@@ -1316,6 +1316,9 @@
     {id:"form_biz", t:"i", title:"補助事業者フォーム", fmt:"提出様式：フォーム入力後送信", btn:"フォームを入力する", link:"DIRECT", href:"https://share-na2.hsforms.com/2UINCaDlJRpawxlf5WuCxeQs57i7"},
     {id:"gbiz", t:"c", title:"GビズIDプライム登録", fmt:"提出様式：GビズIDの登録情報の画面キャプチャを提出", m:"gbiz_corp", btn:"詳しくはこちら"},
     {id:"gbiz", t:"i", title:"GビズIDプライム登録", fmt:"提出様式：GビズIDの登録情報の画面キャプチャを提出", m:"gbiz_indiv", btn:"詳しくはこちら"},
+    {id:"koudou", t:"b", title:"一般事業主行動計画への登録", fmt:"別途窓口よりご案内します。", link:"NONE"},
+    {id:"b_partner", t:"b", title:"パートナーシップ構築宣言への登録", fmt:"別途窓口よりご案内します。", link:"NONE"},
+    {id:"b_keizoku", t:"b", title:"事業継続力強化計画の認定", fmt:"別途窓口よりご案内します。", link:"NONE"},
     {id:"kakutei", t:"i", title:"確定申告書第一表の控え（直近分）", fmt:"提出様式：スキャンした書類をPDFファイルで提出", m:"kakutei", btn:"詳しくはこちら"},
     {id:"kessan", t:"c", title:"決算書類一式（直近3期分）", fmt:"提出様式：PDFファイルで提出", cav:"「必要項目」を必ず確認のうえご提出ください。", m:"kessan_corp", btn:"必要項目はこちら"},
     {id:"kessan", t:"i", title:"決算書類一式（直近3期分）", fmt:"青色申告の場合：青色申告決算書一式／白色申告の場合：白色申告収支内訳書一式（スキャンしてPDFで提出）", m:"kessan_ko", btn:"詳しくはこちら"},
@@ -1476,6 +1479,8 @@
       var action = el('div', 'doc-action');
       if(d.opt){
         action.appendChild(el('span', 'cond-contact', 'まずはご連絡ください'));
+      } else if(d.link === "NONE"){
+        /* 窓口より別途ご案内のため、ボタンは表示しない */
       } else if(d.link === "HEARING"){
         if(d.href){
           var ha = el('a', null, d.btn); ha.href = d.href; ha.target = '_blank'; ha.rel = 'noopener'; action.appendChild(ha);
